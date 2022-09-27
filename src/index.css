@@ -1,4 +1,4 @@
-body {
+/* body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -10,4 +10,63 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+} */
+
+.home {
+  top: 300px;
+  height: 50px;
+  max-width: 700px;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.navbar {
+  background-image: linear-gradient(to right, white, red);
+  font-size: 14px;
+  color: white;
+  position: fixed;
+  width: 100%;
+  top: 0;
+}
+
+/* .restaurant-list {
+} */
+
+#text-box {
+  width: 200px;
+  height: 200px;
+}
+
+#show-bg {
+  background:
+  linear-gradient(to right, rgba(255, 255, 255, 0.99), rgba(244, 211, 185, 0.83)), url('/public/image/some-restaurant.jpg');
+  width: 100%;
+  min-height: 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  position: absolute
+}
+
+.restaurant {
+  height: 400px;
+  width: 400px
+}
+
+.explore, .myFavorites {
+  width: 300px;
+  border: dashed blue 1px
+}
+
+.explore img, .myFavorites img {
+  max-width: 100%;
+  max-height: 100%
+}
+
+.restaurant-list  {
+  top: 100px;
+  max-width: 1300px;
+  position: relative;
 }

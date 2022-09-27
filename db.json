@@ -1,7 +1,79 @@
 {
-    "restaurants" : [
-        {
-            name:
-        }
-    ]
+  "restaurants": [
+    {
+      "name": "Fresh Coast",
+      "location": "Newark, NJ",
+      "image": "/image/fresh-coast.webp",
+      "description": "poke bowl",
+      "price": "$$$",
+      "rating": 4,
+      "ratingcount": 5,
+      "id": 1
+    },
+    {
+      "name": "Halal Guys",
+      "location": "Newark, NJ",
+      "image": "/image/halal-guys.jpg",
+      "description": "gyro",
+      "price": "$$",
+      "rating": 3.5,
+      "ratingcount": 7,
+      "id": 2
+    },
+    {
+      "name": "Sushi Village",
+      "location": "Little Falls, NJ",
+      "image": "/image/sushi-village.jpg",
+      "description": "sushi",
+      "price": "$$$",
+      "rating": 3.5,
+      "ratingcount": 8,
+      "id": 3
+    },
+    {
+      "name": "Ralph's Pizzeria",
+      "location": "Nutley, NJ",
+      "image": "/image/ralphs-pizzeria.webp",
+      "description": "pizza",
+      "price": "$$",
+      "rating": 4,
+      "ratingcount": 12,
+      "id": 4
+    },
+    {
+      "name": "White Manna",
+      "location": "Hackensack, NJ",
+      "image": "/image/white-manna.jpg",
+      "description": "burger",
+      "price": "$$",
+      "rating": 3.5,
+      "ratingcount": 8,
+      "id": 5
+    },
+    {
+      "name": "BBQ Pulled Brisket Burger",
+      "location": "Montclaiar, NJ",
+      "image": "/image/bbq-pulled-brisket-burger.png",
+      "description": "burger",
+      "price": "$$$",
+      "rating": 3.5,
+      "ratingcount": 8,
+      "id": 6
+    },
+    {
+      "name": "East Gate",
+      "location": "West Orange, NJ",
+      "image": "/image/east-gate-sushi.jpg",
+      "description": "sushi",
+      "price": "$$$",
+      "rating": 3.5,
+      "ratingcount": 9,
+      "id": 7
+    }
+  ],
+  "user": [
+    {
+        
+    }
+  ]
 }
