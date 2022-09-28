@@ -57,7 +57,10 @@ code {
 
 .explore, .myFavorites {
   width: 300px;
-  border: dashed blue 1px
+  border: dashed blue 1px;
+  background: white;
+  flex-direction: column;
+  position: relative;
 }
 
 .explore img, .myFavorites img {

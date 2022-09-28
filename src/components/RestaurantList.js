@@ -12,9 +12,10 @@ const initialStateForm = {
 function RestaurantList( { handleNewRestaurant } ) {
 
 const [addRestaurant, setAddRestaurant] = useState(initialStateForm)
+const [thanks, setThanks] = useState('')
 
-function handleOnChange(e) {
-    const [ name, value ] = e.target
+const handleOnChange = (e) => {
+    const { name, value } = e.target;
 
 setAddRestaurant(restaurant => {
     return {
@@ -37,19 +38,34 @@ function handleSubmit(e) {
     })
 }
 
+function renderThanks() {
+    setThanks('Thank you!')
+}
+
 return (
     <form className="restaurant-list" onSubmit={handleSubmit}>
         <h3>Discovered a New Restaurant?  Tell us below!</h3>
-        <p>After submission, we will take a look at the restaurant (to make sure it is legit)</p>
-        <div><span className="add-text">Restaurant Name:</span>
-        <input className="input-box" type="text" name="food" placeholder="Restaurant Name" onChange={handleOnChange}/>
+        <p>After submission, we will search for the restaurant to ensure information provided are correct and up-to-date.  Thank you for helping us grow our site!</p>
+        <div><span className="add-text">Restaurant Name: </span>
+        <input className="input-box" type="text" name="name" placeholder="Restaurant Name" value={addRestaurant.name} onChange={handleOnChange}/>
         </div>
         <div><span className="add-text">Location: </span>
-        <input className="input-box" type="text" name="food" placeholder="Restaurant Name" onChange={handleOnChange}/>
+        <input className="input-box" type="text" name="location" placeholder="Restaurant Location" value={addRestaurant.location} onChange={handleOnChange}/>
         </div>
         <div><span className="add-text">Description: </span>
-        <textarea className="input-box" type="text" name="food" id="text-box" onChange={handleOnChange}/>
-        <div><button>Submit</button></div>
+        <textarea className="input-box" type="text" name="description" id="text-box" value={addRestaurant.description} onChange={handleOnChange}/>
+        <div><span>
+            Your rating: </span>
+            <select name="rating" value={addRestaurant.rating} onChange={handleOnChange}>
+                <option value=""></option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select></div>
+        <div><button onClick={renderThanks}>Submit</button></div>
+        <div>{thanks}</div>
         </div>
     </form>
     )

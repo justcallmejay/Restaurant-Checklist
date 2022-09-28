@@ -8,7 +8,7 @@ function MyFavorites( { myVisits } ) {
         <p>Here are the list of places that you have visited.</p>
 
         {myVisits.map(visit => 
-            <div className="myFavorites">
+            <div className="myFavorites" key={visit.id}>
                         <img src={visit.image} alt={visit.name}/>
                         <h2>{visit.name}</h2>
                         <h3>{visit.description}</h3>
