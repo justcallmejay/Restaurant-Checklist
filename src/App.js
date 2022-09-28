@@ -34,8 +34,9 @@ function handleNewRestaurant(inputRestaurant) {
       <NavBar />
       <Switch>
         <Route path="/restaurants">
-          {restaurant.map(food =>
-          <Restaurants food={food} myVisits={myVisits} setMyVisits={setMyVisits}/>)}
+          {/* {restaurant.map(food => */}
+          <Restaurants restaurant={restaurant} myVisits={myVisits} setMyVisits={setMyVisits}/>
+          {/* )} */}
         </Route>
         <Route path="/my-favorites">
           <MyFavorites myVisits={myVisits}/>

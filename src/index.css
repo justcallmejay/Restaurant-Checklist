@@ -12,6 +12,9 @@ code {
     monospace;
 } */
 
+.App {
+}
+
 .home {
   top: 300px;
   height: 50px;
@@ -30,8 +33,18 @@ code {
   top: 0;
 }
 
-/* .restaurant-list {
-} */
+.restaurant-list {
+  height: 700px;
+  width: 500px;
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 15px;
+  border-color: black;
+  display: inline-block;
+}
+
+.container {
+  text-align: center;
+}
 
 #text-box {
   width: 200px;
@@ -60,16 +73,15 @@ code {
   border: dashed blue 1px;
   background: white;
   flex-direction: column;
-  position: relative;
 }
 
 .explore img, .myFavorites img {
   max-width: 100%;
-  max-height: 100%
+  max-height: 100%;
+  flex-direction: column
 }
 
 .restaurant-list  {
   top: 100px;
   max-width: 1300px;
-  position: relative;
 }
