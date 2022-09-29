@@ -6,7 +6,7 @@
       "image": "/image/fresh-coast.webp",
       "description": "sushi",
       "price": "$$$",
-      "rating": 4,
+      "rating": 3.8,
       "ratingData": [
         5,
         5,
@@ -17,7 +17,7 @@
         4,
         4,
         4,
-        5
+        3
       ],
       "ratingcount": 10,
       "comment": "",
@@ -29,7 +29,7 @@
       "image": "/image/halal-guys.jpg",
       "description": "gyro",
       "price": "$$",
-      "rating": 2.85,
+      "rating": 3,
       "ratingData": [
         4,
         5,
@@ -37,9 +37,10 @@
         3,
         2,
         1,
-        2
+        2,
+        4
       ],
-      "ratingcount": 7,
+      "ratingcount": 8,
       "comment": "",
       "id": 2
     },
@@ -115,7 +116,7 @@
       "image": "/image/bbq-pulled-brisket-burger.png",
       "description": "burger",
       "price": "$$$",
-      "rating": 4.2,
+      "rating": 4.1,
       "ratingData": [
         4,
         4,
@@ -125,10 +126,11 @@
         5,
         4,
         3,
-        5
+        5,
+        3
       ],
-      "ratingcount": 9,
-      "comment": "",
+      "ratingcount": 10,
+      "comment": "I like eating at this establishment!",
       "id": 6
     },
     {

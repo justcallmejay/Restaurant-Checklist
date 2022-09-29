@@ -36,14 +36,16 @@ const renderMyVisits = (place) => {
 
     return (
     <>
-    <div className="restaurant-container">
     <SortRestaurant filterPlace={filterPlace} filterPlacePrice={filterPlacePrice}/>
-    <h1>Explore</h1>
-    <p>Visited a restaurant?  Click one of the places to add it into you list of visited restaurants!</p>
-    
-        {displayPrice.map(food => 
-        <RestaurantCard food={food} renderMyVisits={renderMyVisits} />)}
+    <div className="restaurant-pagetitle">
+        <h1>Explore</h1>
+        <p>Visited a restaurant?  Click one of the places to add it into you list of visited restaurants!</p>
     </div>
+        
+        <div className="restaurant-container">
+            {displayPrice.map(food => 
+            <RestaurantCard food={food} renderMyVisits={renderMyVisits} />)}
+        </div>
     </>
     )
 }

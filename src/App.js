@@ -25,6 +25,7 @@ function handleNewRestaurant(inputRestaurant) {
   })
 }
 
+
   return (
     <div className="App">
       <div id='show-bg'>
