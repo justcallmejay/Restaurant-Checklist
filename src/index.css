@@ -12,8 +12,9 @@ code {
     monospace;
 } */
 
-.App {
-}
+/*
+Home
+*/
 
 .home {
   top: 300px;
@@ -23,32 +24,16 @@ code {
   justify-content: center;
   position: relative;
 }
+/*
+App.ja
+*/
 
-.navbar {
-  background-image: linear-gradient(to right, white, red);
-  font-size: 14px;
-  color: white;
-  position: fixed;
-  width: 100%;
-  top: 0;
+.App {
+  min-height: 100vh;
 }
 
-.restaurant-list {
-  height: 700px;
-  width: 500px;
-  background-color: rgba(255, 255, 255, 0.4);
-  border-radius: 15px;
-  border-color: black;
-  display: inline-block;
-}
-
-.container {
-  text-align: center;
-}
-
-#text-box {
-  width: 200px;
-  height: 200px;
+.content-wrap {
+  flex: 1;
 }
 
 #show-bg {
@@ -63,6 +48,44 @@ code {
   position: absolute
 }
 
+.navbar {
+  background-image: linear-gradient(to right, white, red);
+  font-size: 14px;
+  color: white;
+  position: fixed;
+  width: 100%;
+  top: 0;
+}
+
+/*
+NewRestaurant.js
+*/
+.container {
+  text-align: center;
+}
+
+.restaurant-list {
+  height: 700px;
+  width: 500px;
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 15px;
+  border-color: black;
+  display: inline-block;
+}
+
+#text-box {
+  width: 200px;
+  height: 200px;
+}
+
+/*
+Restaurant.js, RestaurantCard.js
+*/
+
+.restaurant-container {
+  
+}
+
 .restaurant {
   height: 400px;
   width: 400px
@@ -70,7 +93,7 @@ code {
 
 .explore, .myFavorites {
   width: 300px;
-  border: dashed blue 1px;
+  border: inset gray 1px;
   background: white;
   flex-direction: column;
 }
@@ -84,4 +107,63 @@ code {
 .restaurant-list  {
   top: 100px;
   max-width: 1300px;
+}
+
+/*
+MyFavorites.js
+*/
+
+.user-rating {
+  right: 0%;
+  position: relative;
+}
+
+/*
+Footer.js
+*/
+
+.main-footer {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color:rgba(255, 255, 255, 0.99);
+  background-color: red;
+  padding-top: 1em;
+  bottom: 0;
+  width: 100%;
+  max-height: 30%;
+  position: fixed;
+}
+
+ul{
+  list-style: none;
+}
+
+.container {
+  max-width: 100%;
+  margin: auto;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.col {
+  width: 15%;
+  margin: 1px;
+  left: 68%;
+  position: relative;
+}
+
+.col-sm {
+  left: 80%;
+  bottom: 0px;
+  position: relative;
+}
+
+i {
+  margin: 20px;
+  font-size: 20px;
+  font: white;
 }

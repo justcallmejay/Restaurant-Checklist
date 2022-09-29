@@ -4,7 +4,7 @@ import NavBar from "./components/NavBar";
 import Home from "./components/Home";
 import Restaurants from "./components/Restaurants";
 import MyFavorites from "./components/MyFavorites";
-import RestaurantList from "./components/RestaurantList";
+import NewRestaurant from "./components/NewRestaurant";
 import Footer from "./components/Footer";
 import './App.css';
 
@@ -25,11 +25,10 @@ function handleNewRestaurant(inputRestaurant) {
   })
 }
 
-
-
   return (
     <div className="App">
       <div id='show-bg'>
+        <div id='content-wrap'>
       <BrowserRouter>
       <NavBar />
       <Switch>
@@ -42,17 +41,20 @@ function handleNewRestaurant(inputRestaurant) {
           <MyFavorites myVisits={myVisits}/>
         </Route>
         <Route path="/add-restaurant">
-          <RestaurantList handleNewRestaurant={handleNewRestaurant} 
+          <NewRestaurant handleNewRestaurant={handleNewRestaurant} 
           />
         </Route>
         <Route path="/">
           <Home />
         </Route>
       </Switch>
-      <Footer/>
+      
       </BrowserRouter>
       </div>
+     </div>
+      <Footer/>
     </div>
+  
   );
 }
 

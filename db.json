@@ -2,7 +2,7 @@
   "restaurants": [
     {
       "name": "Fresh Coast",
-      "location": "Newark, NJ",
+      "location": 1.3,
       "image": "/image/fresh-coast.webp",
       "description": "poke bowl",
       "price": "$$$",
@@ -12,7 +12,7 @@
     },
     {
       "name": "Halal Guys",
-      "location": "Newark, NJ",
+      "location": 3.5,
       "image": "/image/halal-guys.jpg",
       "description": "gyro",
       "price": "$$",
@@ -22,7 +22,7 @@
     },
     {
       "name": "Sushi Village",
-      "location": "Little Falls, NJ",
+      "location": 12.4,
       "image": "/image/sushi-village.jpg",
       "description": "sushi",
       "price": "$$$",
@@ -32,7 +32,7 @@
     },
     {
       "name": "Ralph's Pizzeria",
-      "location": "Nutley, NJ",
+      "location": 2.3,
       "image": "/image/ralphs-pizzeria.webp",
       "description": "pizza",
       "price": "$$",
@@ -42,7 +42,7 @@
     },
     {
       "name": "White Manna",
-      "location": "Hackensack, NJ",
+      "location": 6.4,
       "image": "/image/white-manna.jpg",
       "description": "burger",
       "price": "$$",
@@ -52,7 +52,7 @@
     },
     {
       "name": "BBQ Pulled Brisket Burger",
-      "location": "Montclaiar, NJ",
+      "location": 3.2,
       "image": "/image/bbq-pulled-brisket-burger.png",
       "description": "burger",
       "price": "$$$",
@@ -62,7 +62,7 @@
     },
     {
       "name": "East Gate",
-      "location": "West Orange, NJ",
+      "location": 4.8,
       "image": "/image/east-gate-sushi.jpg",
       "description": "sushi",
       "price": "$$$",
