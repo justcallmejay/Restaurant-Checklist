@@ -6,9 +6,21 @@
       "image": "/image/fresh-coast.webp",
       "description": "sushi",
       "price": "$$$",
-      "rating": 5.136904761904762,
-      "ratingcount": 8,
-      "comment": "thanks for the food!",
+      "rating": 4,
+      "ratingData": [
+        5,
+        5,
+        4,
+        5,
+        3,
+        1,
+        4,
+        4,
+        4,
+        5
+      ],
+      "ratingcount": 10,
+      "comment": "",
       "id": 1
     },
     {
@@ -17,7 +29,16 @@
       "image": "/image/halal-guys.jpg",
       "description": "gyro",
       "price": "$$",
-      "rating": 3.5,
+      "rating": 2.85,
+      "ratingData": [
+        4,
+        5,
+        3,
+        3,
+        2,
+        1,
+        2
+      ],
       "ratingcount": 7,
       "comment": "",
       "id": 2
@@ -28,7 +49,17 @@
       "image": "/image/sushi-village.jpg",
       "description": "sushi",
       "price": "$$$",
-      "rating": 3.5,
+      "rating": 4.25,
+      "ratingData": [
+        4,
+        5,
+        5,
+        4,
+        5,
+        3,
+        4,
+        4
+      ],
       "ratingcount": 8,
       "comment": "",
       "id": 3
@@ -39,7 +70,20 @@
       "image": "/image/ralphs-pizzeria.webp",
       "description": "pizza",
       "price": "$$",
-      "rating": 4,
+      "rating": 3.16,
+      "ratingData": [
+        4,
+        5,
+        4,
+        4,
+        3,
+        3,
+        4,
+        2,
+        3,
+        3,
+        3
+      ],
       "ratingcount": 12,
       "comment": "",
       "id": 4
@@ -50,7 +94,17 @@
       "image": "/image/white-manna.jpg",
       "description": "burger",
       "price": "$$",
-      "rating": 3.5,
+      "rating": 4.375,
+      "ratingData": [
+        4,
+        4,
+        5,
+        5,
+        4,
+        5,
+        3,
+        5
+      ],
       "ratingcount": 8,
       "comment": "",
       "id": 5
@@ -61,8 +115,19 @@
       "image": "/image/bbq-pulled-brisket-burger.png",
       "description": "burger",
       "price": "$$$",
-      "rating": 3.5,
-      "ratingcount": 8,
+      "rating": 4.2,
+      "ratingData": [
+        4,
+        4,
+        3,
+        5,
+        5,
+        5,
+        4,
+        3,
+        5
+      ],
+      "ratingcount": 9,
       "comment": "",
       "id": 6
     },
@@ -72,7 +137,18 @@
       "image": "/image/east-gate-sushi.jpg",
       "description": "sushi",
       "price": "$$$",
-      "rating": 3.5,
+      "rating": 3.77,
+      "ratingData": [
+        4,
+        4,
+        5,
+        3,
+        4,
+        3,
+        5,
+        3,
+        3
+      ],
       "ratingcount": 9,
       "comment": "",
       "id": 7

@@ -20,7 +20,7 @@ function MyFavorites( { myVisits } ) {
                         <img src={visit.image} alt={visit.name}/>
                         <h2>{visit.name}</h2>
                         <h3>Type: {visit.description}</h3>
-                        <h3>Rating avg: {visit.rating} / 5 of {visit.ratingcount} Customers</h3>
+                        <h3>Rating avg: {visit.rating.toFixed(2)} / 5 of {visit.ratingcount} Customers</h3>
                         <h3>Price: {visit.price}</h3>
                         <div className="user-rating">
         <UserRating myVisits={myVisits} visit={visit}/>
