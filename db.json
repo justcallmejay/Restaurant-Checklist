@@ -29,7 +29,7 @@
       "image": "/image/halal-guys.jpg",
       "description": "gyro",
       "price": "$$",
-      "rating": 3,
+      "rating": 2.85,
       "ratingData": [
         4,
         5,
@@ -37,10 +37,9 @@
         3,
         2,
         1,
-        2,
-        4
+        2
       ],
-      "ratingcount": 8,
+      "ratingcount": 7,
       "comment": "",
       "id": 2
     },
@@ -95,7 +94,7 @@
       "image": "/image/white-manna.jpg",
       "description": "burger",
       "price": "$$",
-      "rating": 4.375,
+      "rating": 4.111111111111111,
       "ratingData": [
         4,
         4,
@@ -104,10 +103,11 @@
         4,
         5,
         3,
-        5
+        5,
+        2
       ],
-      "ratingcount": 8,
-      "comment": "",
+      "ratingcount": 9,
+      "comment": "I enjoyed their burger.  You should really try it out!",
       "id": 5
     },
     {
@@ -116,7 +116,7 @@
       "image": "/image/bbq-pulled-brisket-burger.png",
       "description": "burger",
       "price": "$$$",
-      "rating": 4.1,
+      "rating": 4.2,
       "ratingData": [
         4,
         4,
@@ -126,11 +126,10 @@
         5,
         4,
         3,
-        5,
-        3
+        5
       ],
-      "ratingcount": 10,
-      "comment": "I like eating at this establishment!",
+      "ratingcount": 9,
+      "comment": "",
       "id": 6
     },
     {

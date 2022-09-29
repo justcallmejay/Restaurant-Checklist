@@ -97,6 +97,7 @@ Restaurant.js, RestaurantCard.js
   position: absolute;
   overflow-y: auto;
   border-radius: 15px;
+  align-items: center;
 }
 
 .restaurant {
@@ -105,17 +106,21 @@ Restaurant.js, RestaurantCard.js
 }
 
 .explore, .myFavorites {
+  min-height: 625px;
   width: 300px;
   border: inset gray 1px;
+  margin: 10px;
   background: white;
   flex-direction: column;
   display: flex;
+  float: left;
 }
 
 .explore img, .myFavorites img {
-  max-width: 100%;
-  max-height: 100%;
-  flex-direction: column
+  max-width: 300px;
+  max-height: 200px;
+  flex-direction: column;
+  align-content: center;
 }
 
 .restaurant-list  {
