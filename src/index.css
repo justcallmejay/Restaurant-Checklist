@@ -83,7 +83,11 @@ Restaurant.js, RestaurantCard.js
 */
 
 .restaurant-container {
-  
+  /* width: 100%;
+  height: 600px;
+  background-color: rgba(255, 255, 255, 0.4);
+  position: fixed;
+  align-content: center; */
 }
 
 .restaurant {
@@ -96,6 +100,7 @@ Restaurant.js, RestaurantCard.js
   border: inset gray 1px;
   background: white;
   flex-direction: column;
+  display: flex;
 }
 
 .explore img, .myFavorites img {
@@ -166,4 +171,11 @@ i {
   margin: 20px;
   font-size: 20px;
   font: white;
+}
+
+.textarea-submit {
+  width: 90%;
+  height: 100px;
+  margin: 5px;
+  align-items: center;
 }
