@@ -1,15 +1,12 @@
 import React, { useState } from "react";
 import UserRating from "./UserRating";
 import UserComment from "./UserComment";
-import VisitCount from "./VIsitCount"
+import VisitCount from "./VIsitCount";
+import DeleteCard from "./DeleteCard"
 
-function MyFavorites( { myVisits, renderRate, setRenderRate } ) {
+function MyFavorites( { myVisits, setMyVisits, ratePlace, setRatePlace } ) {
 
     const [renderComment, setRenderComment] = useState('')
-    // function handleUserRate(e) {
-    //     setRenderRate(e.target.value)
-    // }
-
 
     return (
     <>
@@ -28,9 +25,11 @@ function MyFavorites( { myVisits, renderRate, setRenderRate } ) {
                         <div>
         <a style={{ fontWeight : "bold" }}>Your comment: </a> {renderComment}
         </div>
-        <UserRating myVisits={myVisits} visit={visit} renderRate={renderRate} setRenderRate={setRenderRate}/>
+
+        <UserRating myVisits={myVisits} visit={visit} ratePlace={ratePlace} setRatePlace={setRatePlace}/>
         <UserComment myVisits={myVisits} visit={visit} renderComment={renderComment} setRenderComment={setRenderComment}/>
         <VisitCount />
+        <DeleteCard visit={visit} myVisits={myVisits} setMyVisits={setMyVisits}/>
         </div>
         </div>
         )}

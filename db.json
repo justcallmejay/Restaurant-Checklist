@@ -6,7 +6,7 @@
       "image": "/image/fresh-coast.webp",
       "description": "sushi",
       "price": "$$$",
-      "rating": 3.5384615384615383,
+      "rating": 3.7777777777777777,
       "ratingData": [
         5,
         5,
@@ -16,13 +16,9 @@
         1,
         4,
         4,
-        4,
-        3,
-        2,
-        2,
-        4
+        3
       ],
-      "ratingcount": 13,
+      "ratingcount": 9,
       "comment": "",
       "id": 1
     },
@@ -156,34 +152,6 @@
       "ratingcount": 9,
       "comment": "",
       "id": 7
-    },
-    {
-      "name": "Ice Cream",
-      "location": 2,
-      "image": "https://miro.medium.com/max/1100/0*_whxA4CEuPShuvpS",
-      "description": "dessert",
-      "price": "$$$",
-      "rating": 4,
-      "ratingData": [
-        4
-      ],
-      "comment": "",
-      "ratingcount": 1,
-      "id": 8
-    },
-    {
-      "name": "Ice Cream",
-      "location": 2,
-      "image": "https://miro.medium.com/max/1100/0*_whxA4CEuPShuvpS",
-      "description": "dessert",
-      "price": "$$$",
-      "rating": 4,
-      "ratingData": [
-        4
-      ],
-      "comment": "",
-      "ratingcount": 1,
-      "id": 9
     }
   ],
   "user": [

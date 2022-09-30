@@ -23,21 +23,19 @@ function App() {
 const [restaurant, setRestaurant] = useState([])
 const [myVisits, setMyVisits] = useState([])
 const [addRestaurant, setAddRestaurant] = useState(initialStateForm)
-const [renderRate, setRenderRate] = useState("")
+const [ratePlace, setRatePlace] = useState(null)
 
 useEffect(() => {
     fetch('http://localhost:4000/restaurants')
     .then(res => res.json())
     .then(restaurants => setRestaurant(restaurants))
-}, [myVisits, addRestaurant, renderRate])
+}, [addRestaurant, ratePlace])
 
 function handleNewRestaurant(inputRestaurant) {
   setRestaurant(place => {
     return [...place, inputRestaurant]
   })
 }
-
-
 
   return (
     <div className="App">
@@ -52,7 +50,7 @@ function handleNewRestaurant(inputRestaurant) {
           {/* )} */}
         </Route>
         <Route path="/my-favorites">
-          <MyFavorites myVisits={myVisits} renderRate={renderRate} setRenderRate={setRenderRate}/>
+          <MyFavorites myVisits={myVisits} setMyVisits={setMyVisits} ratePlace={ratePlace} setRatePlace={setRatePlace}/>
         </Route>
         <Route path="/add-restaurant">
           <NewRestaurant handleNewRestaurant={handleNewRestaurant} addRestaurant={addRestaurant} setAddRestaurant={setAddRestaurant} initialStateForm={initialStateForm}
