@@ -6,7 +6,7 @@
       "image": "/image/fresh-coast.webp",
       "description": "sushi",
       "price": "$$$",
-      "rating": 3.8,
+      "rating": 3.5384615384615383,
       "ratingData": [
         5,
         5,
@@ -17,9 +17,12 @@
         4,
         4,
         4,
-        3
+        3,
+        2,
+        2,
+        4
       ],
-      "ratingcount": 10,
+      "ratingcount": 13,
       "comment": "",
       "id": 1
     },
@@ -94,7 +97,7 @@
       "image": "/image/white-manna.jpg",
       "description": "burger",
       "price": "$$",
-      "rating": 4.111111111111111,
+      "rating": 4.222222222222222,
       "ratingData": [
         4,
         4,
@@ -104,7 +107,7 @@
         5,
         3,
         5,
-        2
+        3
       ],
       "ratingcount": 9,
       "comment": "I enjoyed their burger.  You should really try it out!",
@@ -153,6 +156,34 @@
       "ratingcount": 9,
       "comment": "",
       "id": 7
+    },
+    {
+      "name": "Ice Cream",
+      "location": 2,
+      "image": "https://miro.medium.com/max/1100/0*_whxA4CEuPShuvpS",
+      "description": "dessert",
+      "price": "$$$",
+      "rating": 4,
+      "ratingData": [
+        4
+      ],
+      "comment": "",
+      "ratingcount": 1,
+      "id": 8
+    },
+    {
+      "name": "Ice Cream",
+      "location": 2,
+      "image": "https://miro.medium.com/max/1100/0*_whxA4CEuPShuvpS",
+      "description": "dessert",
+      "price": "$$$",
+      "rating": 4,
+      "ratingData": [
+        4
+      ],
+      "comment": "",
+      "ratingcount": 1,
+      "id": 9
     }
   ],
   "user": [

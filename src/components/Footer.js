@@ -16,7 +16,7 @@ function Footer() {
                         <ul className="list-unstyled">
                             <li>Contact Us:</li>
                             <li>Phone number: 555-555-5555</li>
-                            <li>Email: someemail@email.com</li>
+                            <li>Email: someemail@somemail.com</li>
                             <a href="https://facebook.com"><i class="fab fa-facebook-f"></i></a>
                             <a href="https://twitter.com"><i class="fab fa-twitter"></i></a>
                             <a href="https://instagram.com"><i class="fab fa-instagram"></i></a>

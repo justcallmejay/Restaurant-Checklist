@@ -8,22 +8,35 @@ import NewRestaurant from "./components/NewRestaurant";
 import Footer from "./components/Footer";
 import './App.css';
 
+const initialStateForm = {
+  name: '',
+  location: '',
+  image: '',
+  description: '',
+  price: '',
+  rating: '',
+  ratingData: []
+}
+
 function App() {
 
 const [restaurant, setRestaurant] = useState([])
 const [myVisits, setMyVisits] = useState([])
+const [addRestaurant, setAddRestaurant] = useState(initialStateForm)
+const [renderRate, setRenderRate] = useState("")
 
 useEffect(() => {
     fetch('http://localhost:4000/restaurants')
     .then(res => res.json())
-    .then(restaurant => setRestaurant(restaurant))
-}, [])
+    .then(restaurants => setRestaurant(restaurants))
+}, [myVisits, addRestaurant, renderRate])
 
 function handleNewRestaurant(inputRestaurant) {
   setRestaurant(place => {
     return [...place, inputRestaurant]
   })
 }
+
 
 
   return (
@@ -35,14 +48,14 @@ function handleNewRestaurant(inputRestaurant) {
       <Switch>
         <Route path="/restaurants">
           {/* {restaurant.map(food => */}
-          <Restaurants restaurant={restaurant} myVisits={myVisits} setMyVisits={setMyVisits}/>
+          <Restaurants restaurant={restaurant} setRestaurant={setRestaurant} myVisits={myVisits} setMyVisits={setMyVisits}/>
           {/* )} */}
         </Route>
         <Route path="/my-favorites">
-          <MyFavorites myVisits={myVisits} restaurant={restaurant} setRestaurant={setRestaurant}/>
+          <MyFavorites myVisits={myVisits} renderRate={renderRate} setRenderRate={setRenderRate}/>
         </Route>
         <Route path="/add-restaurant">
-          <NewRestaurant handleNewRestaurant={handleNewRestaurant} 
+          <NewRestaurant handleNewRestaurant={handleNewRestaurant} addRestaurant={addRestaurant} setAddRestaurant={setAddRestaurant} initialStateForm={initialStateForm}
           />
         </Route>
         <Route path="/">

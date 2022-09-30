@@ -1,10 +1,11 @@
-import React from "react";
-import UserRating from "./UserRating"
-import UserComment from "./UserComment"
+import React, { useState } from "react";
+import UserRating from "./UserRating";
+import UserComment from "./UserComment";
+import VisitCount from "./VIsitCount"
 
-function MyFavorites( { myVisits } ) {
+function MyFavorites( { myVisits, renderRate, setRenderRate } ) {
 
-
+    const [renderComment, setRenderComment] = useState('')
     // function handleUserRate(e) {
     //     setRenderRate(e.target.value)
     // }
@@ -24,8 +25,12 @@ function MyFavorites( { myVisits } ) {
                         <h3>Rating avg: {visit.rating.toFixed(2)} / 5 of {visit.ratingcount} Customers</h3>
                         <h3>Price: {visit.price}</h3>
                         <div className="user-rating">
-        <UserRating myVisits={myVisits} visit={visit}/>
-        <UserComment myVisits={myVisits} visit={visit}/>
+                        <div>
+        <a style={{ fontWeight : "bold" }}>Your comment: </a> {renderComment}
+        </div>
+        <UserRating myVisits={myVisits} visit={visit} renderRate={renderRate} setRenderRate={setRenderRate}/>
+        <UserComment myVisits={myVisits} visit={visit} renderComment={renderComment} setRenderComment={setRenderComment}/>
+        <VisitCount />
         </div>
         </div>
         )}
