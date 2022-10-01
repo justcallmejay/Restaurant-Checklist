@@ -38,6 +38,7 @@ function MyFavorites( { myVisits, setMyVisits, ratePlace, setRatePlace } ) {
                         <h3>Price: {visit.price}</h3>
                         <div className="user-rating">
                         <div>
+        <div style={{ fontWeight : "bold" }}>Your rating: {visit.userrating}</div>
         <a style={{ fontWeight : "bold" }}>Your comment: </a>{visit.comment}
         </div>
 
