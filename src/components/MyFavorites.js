@@ -4,9 +4,10 @@ import UserComment from "./UserComment";
 import VisitCount from "./VisitCount";
 import DeleteCard from "./DeleteCard"
 
-function MyFavorites( { myVisits, setMyVisits, ratePlace, setRatePlace } ) {
+function MyFavorites( { myVisits, setMyVisits } ) {
 
     const [renderComment, setRenderComment] = useState('')
+    const [ratePlace, setRatePlace] = useState(null)
 
     console.log(myVisits)
 
@@ -14,7 +15,7 @@ function MyFavorites( { myVisits, setMyVisits, ratePlace, setRatePlace } ) {
         fetch('http://localhost:4000/user')
         .then(res => res.json())
         .then(myVisits => setMyVisits(myVisits))
-    }, [renderComment, ratePlace])
+    }, [renderComment, ratePlace, setMyVisits])
 
     return (
     <>
@@ -27,8 +28,7 @@ function MyFavorites( { myVisits, setMyVisits, ratePlace, setRatePlace } ) {
                         <img src={visit.image} alt={visit.name}/>
                         <h2>{visit.name}</h2>
                         <h3>Type: {visit.description}</h3>
-                        <h3>Rating avg: {visit.rating.toFixed(2)} / 5 of 
-                        {visit.ratingcount} Customers</h3>
+                        <h3>Rating avg: {visit.rating.toFixed(2)} / 5 from  {visit.ratingcount} Customers</h3>
                         <h3>Price: {visit.price}</h3>
                         <div className="user-rating">
                         <div>
@@ -44,7 +44,7 @@ function MyFavorites( { myVisits, setMyVisits, ratePlace, setRatePlace } ) {
         <UserComment 
             myVisits={myVisits} visit={visit} 
             renderComment={renderComment} setRenderComment={setRenderComment}/>
-        <VisitCount />
+        <VisitCount visit={visit}/>
         <DeleteCard 
             myVisits={myVisits} setMyVisits={setMyVisits} visit={visit} />
         </div>

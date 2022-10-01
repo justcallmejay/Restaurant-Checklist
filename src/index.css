@@ -103,7 +103,7 @@ Restaurant.js, RestaurantCard.js
   min-height: 600px;
   width: 300px;
   border: inset gray 1px;
-  margin: 10px;
+  margin: 5px;
   background: white;
   flex-direction: column;
   display: flex;
@@ -124,6 +124,7 @@ Restaurant.js, RestaurantCard.js
 
 #message {
   left: 80%;
+  bottom: 100%;
   position: relative;
   /* transition: 1s;
   transform: translateY(-150%); */

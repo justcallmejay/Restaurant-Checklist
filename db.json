@@ -6,7 +6,7 @@
       "image": "/image/fresh-coast.webp",
       "description": "sushi",
       "price": "$$$",
-      "rating": 3.6,
+      "rating": 3.6363636363636362,
       "ratingData": [
         5,
         5,
@@ -17,9 +17,10 @@
         4,
         4,
         3,
-        2
+        2,
+        4
       ],
-      "ratingcount": 10,
+      "ratingcount": 11,
       "comment": "",
       "id": 1
     },
@@ -29,7 +30,7 @@
       "image": "/image/halal-guys.jpg",
       "description": "gyro",
       "price": "$$",
-      "rating": 3,
+      "rating": 3.2222222222222223,
       "ratingData": [
         4,
         5,
@@ -38,9 +39,10 @@
         2,
         1,
         2,
-        4
+        4,
+        5
       ],
-      "ratingcount": 8,
+      "ratingcount": 9,
       "comment": "",
       "id": 2
     },
@@ -163,7 +165,7 @@
       "image": "/image/fresh-coast.webp",
       "description": "sushi",
       "price": "$$$",
-      "rating": 3.6,
+      "rating": 3.6363636363636362,
       "ratingData": [
         5,
         5,
@@ -174,11 +176,148 @@
         4,
         4,
         3,
-        2
+        2,
+        4
       ],
-      "ratingcount": 10,
+      "ratingcount": 11,
       "comment": "",
-      "id": 1
+      "id": 1,
+      "userrating": 4,
+      "visit": 0
+    },
+    {
+      "name": "Halal Guys",
+      "location": 3.5,
+      "image": "/image/halal-guys.jpg",
+      "description": "gyro",
+      "price": "$$",
+      "rating": 3.2222222222222223,
+      "ratingData": [
+        4,
+        5,
+        3,
+        3,
+        2,
+        1,
+        2,
+        4,
+        5
+      ],
+      "ratingcount": 9,
+      "comment": "",
+      "id": 2,
+      "userrating": 5
+    },
+    {
+      "name": "Sushi Village",
+      "location": 12.4,
+      "image": "/image/sushi-village.jpg",
+      "description": "sushi",
+      "price": "$$$",
+      "rating": 4.25,
+      "ratingData": [
+        4,
+        5,
+        5,
+        4,
+        5,
+        3,
+        4,
+        4
+      ],
+      "ratingcount": 8,
+      "comment": "",
+      "id": 3
+    },
+    {
+      "name": "Ralph's Pizzeria",
+      "location": 2.3,
+      "image": "/image/ralphs-pizzeria.webp",
+      "description": "pizza",
+      "price": "$$",
+      "rating": 3.16,
+      "ratingData": [
+        4,
+        5,
+        4,
+        4,
+        3,
+        3,
+        4,
+        2,
+        3,
+        3,
+        3
+      ],
+      "ratingcount": 12,
+      "comment": "",
+      "id": 4
+    },
+    {
+      "name": "White Manna",
+      "location": 6.4,
+      "image": "/image/white-manna.jpg",
+      "description": "burger",
+      "price": "$$",
+      "rating": 4.222222222222222,
+      "ratingData": [
+        4,
+        4,
+        5,
+        5,
+        4,
+        5,
+        3,
+        5,
+        3
+      ],
+      "ratingcount": 9,
+      "comment": "I enjoyed their burger.  You should really try it out!",
+      "id": 5
+    },
+    {
+      "name": "BBQ Pulled Brisket Burger",
+      "location": 3.2,
+      "image": "/image/bbq-pulled-brisket-burger.png",
+      "description": "burger",
+      "price": "$$$",
+      "rating": 4.2,
+      "ratingData": [
+        4,
+        4,
+        3,
+        5,
+        5,
+        5,
+        4,
+        3,
+        5
+      ],
+      "ratingcount": 9,
+      "comment": "",
+      "id": 6
+    },
+    {
+      "name": "East Gate",
+      "location": 4.8,
+      "image": "/image/east-gate-sushi.jpg",
+      "description": "sushi",
+      "price": "$$$",
+      "rating": 3.77,
+      "ratingData": [
+        4,
+        4,
+        5,
+        3,
+        4,
+        3,
+        5,
+        3,
+        3
+      ],
+      "ratingcount": 9,
+      "comment": "",
+      "id": 7
     }
   ]
 }
