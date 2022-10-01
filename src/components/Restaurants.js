@@ -10,6 +10,13 @@ const renderMyVisits = (place) => {
             const renderRestaurant = [...myVisits, place]
             setMyVisits(renderRestaurant)
         }
+        fetch('http://localhost:4000/user', {
+            method: "POST",
+            headers: {
+                "Content-Type" : "application/json"
+            },
+            body: JSON.stringify(place)
+        })
     }    
     
     const [filterRestaurant, setFilterRestaurant] = useState("All")

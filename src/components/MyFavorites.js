@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import UserRating from "./UserRating";
 import UserComment from "./UserComment";
 import VisitCount from "./VIsitCount";
@@ -7,6 +7,21 @@ import DeleteCard from "./DeleteCard"
 function MyFavorites( { myVisits, setMyVisits, ratePlace, setRatePlace } ) {
 
     const [renderComment, setRenderComment] = useState('')
+
+    console.log(myVisits)
+
+    useEffect(() => {
+        fetch('http://localhost:4000/user')
+        .then(res => res.json())
+        .then(myVisits => setMyVisits(myVisits))
+    }, [renderComment])
+
+    function deleteCard(removelist) {
+        console.log(removelist)
+        const deleteRestaurantCard = myVisits.filter((place) => 
+        place.id !== removelist.id);
+                return setMyVisits(deleteRestaurantCard);
+            }
 
     return (
     <>
@@ -23,13 +38,13 @@ function MyFavorites( { myVisits, setMyVisits, ratePlace, setRatePlace } ) {
                         <h3>Price: {visit.price}</h3>
                         <div className="user-rating">
                         <div>
-        <a style={{ fontWeight : "bold" }}>Your comment: </a> {renderComment}
+        <a style={{ fontWeight : "bold" }}>Your comment: </a>{visit.comment}
         </div>
 
         <UserRating myVisits={myVisits} visit={visit} ratePlace={ratePlace} setRatePlace={setRatePlace}/>
         <UserComment myVisits={myVisits} visit={visit} renderComment={renderComment} setRenderComment={setRenderComment}/>
         <VisitCount />
-        <DeleteCard visit={visit} myVisits={myVisits} setMyVisits={setMyVisits}/>
+        <DeleteCard visit={visit} deleteCard={deleteCard}/>
         </div>
         </div>
         )}

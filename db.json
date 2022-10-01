@@ -6,7 +6,7 @@
       "image": "/image/fresh-coast.webp",
       "description": "sushi",
       "price": "$$$",
-      "rating": 3.7777777777777777,
+      "rating": 3.78,
       "ratingData": [
         5,
         5,
@@ -48,7 +48,7 @@
       "image": "/image/sushi-village.jpg",
       "description": "sushi",
       "price": "$$$",
-      "rating": 4.25,
+      "rating": 4.333333333333333,
       "ratingData": [
         4,
         5,
@@ -57,9 +57,10 @@
         5,
         3,
         4,
-        4
+        4,
+        5
       ],
-      "ratingcount": 8,
+      "ratingcount": 9,
       "comment": "",
       "id": 3
     },
@@ -106,7 +107,7 @@
         3
       ],
       "ratingcount": 9,
-      "comment": "I enjoyed their burger.  You should really try it out!",
+      "comment": "",
       "id": 5
     },
     {
@@ -152,9 +153,21 @@
       "ratingcount": 9,
       "comment": "",
       "id": 7
+    },
+    {
+      "name": "Ice Cream",
+      "location": 2,
+      "image": "https://miro.medium.com/max/1100/0*_whxA4CEuPShuvpS",
+      "description": "dessert",
+      "price": "$$$",
+      "rating": 4,
+      "ratingData": [
+        4
+      ],
+      "comment": "",
+      "ratingcount": 1,
+      "id": 8
     }
   ],
-  "user": [
-    {}
-  ]
+  "user": []
 }
