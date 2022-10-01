@@ -42,17 +42,27 @@ const renderMyVisits = (place) => {
         return price.price === filterPrice
     })
 
+    const [searchBar, setSearchBar] = useState('')
+
+    function searchRestaurant(e) {
+        setSearchBar(e.target.value);
+    }
+
+    const findRestaurant = displayPrice.filter(place => {
+        return place.name.toLowerCase().includes(searchBar.toLowerCase())
+    })
+
     return (
     <>
     <div className="restaurant-pagetitle">
         <h1>Explore</h1>
         <p>Visited a restaurant?  Click one of the places to add it into you list of visited restaurants!</p>
     <FilterRestaurant filterPlace={filterPlace} filterPlacePrice={filterPlacePrice}/>
-    <SortRestaurant restaurant={restaurant} setRestaurant={setRestaurant}/>
+    <SortRestaurant restaurant={restaurant} setRestaurant={setRestaurant} searchBar={searchBar} searchRestaurant={searchRestaurant}/>
     </div>
         
         <div className="restaurant-container">
-            {displayPrice.map(food => 
+            {findRestaurant.map(food => 
             <RestaurantCard food={food} renderMyVisits={renderMyVisits} />)}
         </div>
     </>

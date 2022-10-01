@@ -6,7 +6,7 @@
       "image": "/image/fresh-coast.webp",
       "description": "sushi",
       "price": "$$$",
-      "rating": 3.8,
+      "rating": 3.6,
       "ratingData": [
         5,
         5,
@@ -17,7 +17,7 @@
         4,
         4,
         3,
-        4
+        2
       ],
       "ratingcount": 10,
       "comment": "",
@@ -29,7 +29,7 @@
       "image": "/image/halal-guys.jpg",
       "description": "gyro",
       "price": "$$",
-      "rating": 2.85,
+      "rating": 3,
       "ratingData": [
         4,
         5,
@@ -37,9 +37,10 @@
         3,
         2,
         1,
-        2
+        2,
+        4
       ],
-      "ratingcount": 7,
+      "ratingcount": 8,
       "comment": "",
       "id": 2
     },
@@ -49,7 +50,7 @@
       "image": "/image/sushi-village.jpg",
       "description": "sushi",
       "price": "$$$",
-      "rating": 4.333333333333333,
+      "rating": 4.25,
       "ratingData": [
         4,
         5,
@@ -58,10 +59,9 @@
         5,
         3,
         4,
-        4,
-        5
+        4
       ],
-      "ratingcount": 9,
+      "ratingcount": 8,
       "comment": "",
       "id": 3
     },
@@ -108,7 +108,7 @@
         3
       ],
       "ratingcount": 9,
-      "comment": "",
+      "comment": "I enjoyed their burger.  You should really try it out!",
       "id": 5
     },
     {
@@ -154,20 +154,6 @@
       "ratingcount": 9,
       "comment": "",
       "id": 7
-    },
-    {
-      "name": "Ice Cream",
-      "location": 2,
-      "image": "https://miro.medium.com/max/1100/0*_whxA4CEuPShuvpS",
-      "description": "dessert",
-      "price": "$$$",
-      "rating": 4,
-      "ratingData": [
-        4
-      ],
-      "comment": "",
-      "ratingcount": 1,
-      "id": 8
     }
   ],
   "user": [
@@ -177,7 +163,7 @@
       "image": "/image/fresh-coast.webp",
       "description": "sushi",
       "price": "$$$",
-      "rating": 3.8,
+      "rating": 3.6,
       "ratingData": [
         5,
         5,
@@ -188,114 +174,11 @@
         4,
         4,
         3,
-        4
+        2
       ],
       "ratingcount": 10,
       "comment": "",
-      "id": 1,
-      "userrating": 4
-    },
-    {
-      "name": "Halal Guys",
-      "location": 3.5,
-      "image": "/image/halal-guys.jpg",
-      "description": "gyro",
-      "price": "$$",
-      "rating": 2.85,
-      "ratingData": [
-        4,
-        5,
-        3,
-        3,
-        2,
-        1,
-        2
-      ],
-      "ratingcount": 7,
-      "comment": "",
-      "id": 2
-    },
-    {
-      "name": "Sushi Village",
-      "location": 12.4,
-      "image": "/image/sushi-village.jpg",
-      "description": "sushi",
-      "price": "$$$",
-      "rating": 4.333333333333333,
-      "ratingData": [
-        4,
-        5,
-        5,
-        4,
-        5,
-        3,
-        4,
-        4,
-        5
-      ],
-      "ratingcount": 9,
-      "comment": "",
-      "id": 3
-    },
-    {
-      "name": "Ralph's Pizzeria",
-      "location": 2.3,
-      "image": "/image/ralphs-pizzeria.webp",
-      "description": "pizza",
-      "price": "$$",
-      "rating": 3.16,
-      "ratingData": [
-        4,
-        5,
-        4,
-        4,
-        3,
-        3,
-        4,
-        2,
-        3,
-        3,
-        3
-      ],
-      "ratingcount": 12,
-      "comment": "",
-      "id": 4
-    },
-    {
-      "name": "White Manna",
-      "location": 6.4,
-      "image": "/image/white-manna.jpg",
-      "description": "burger",
-      "price": "$$",
-      "rating": 4.222222222222222,
-      "ratingData": [
-        4,
-        4,
-        5,
-        5,
-        4,
-        5,
-        3,
-        5,
-        3
-      ],
-      "ratingcount": 9,
-      "comment": "",
-      "id": 5
-    },
-    {
-      "name": "Ice Cream",
-      "location": 2,
-      "image": "https://miro.medium.com/max/1100/0*_whxA4CEuPShuvpS",
-      "description": "dessert",
-      "price": "$$$",
-      "rating": 4,
-      "ratingData": [
-        4
-      ],
-      "comment": "",
-      "ratingcount": 1,
-      "id": 8
+      "id": 1
     }
   ]
 }

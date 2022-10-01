@@ -29,7 +29,7 @@ useEffect(() => {
     fetch('http://localhost:4000/restaurants')
     .then(res => res.json())
     .then(restaurants => setRestaurant(restaurants))
-}, [addRestaurant, ratePlace])
+}, [addRestaurant, ratePlace, myVisits])
 
 function handleNewRestaurant(inputRestaurant) {
   setRestaurant(place => {
