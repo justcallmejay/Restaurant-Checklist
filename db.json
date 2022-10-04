@@ -6,7 +6,7 @@
       "image": "/image/fresh-coast.webp",
       "description": "sushi",
       "price": "$$$",
-      "rating": 3.5833333333333335,
+      "rating": 3.58,
       "ratingData": [
         5,
         5,
@@ -31,7 +31,7 @@
       "image": "/image/halal-guys.jpg",
       "description": "gyro",
       "price": "$$",
-      "rating": 3.2,
+      "rating": 3.1818181818181817,
       "ratingData": [
         4,
         5,
@@ -42,9 +42,10 @@
         2,
         4,
         5,
+        3,
         3
       ],
-      "ratingcount": 10,
+      "ratingcount": 11,
       "comment": "",
       "id": 2
     },
@@ -160,5 +161,32 @@
       "id": 7
     }
   ],
-  "user": []
+  "user": [
+    {
+      "name": "Fresh Coast",
+      "location": 1.3,
+      "image": "/image/fresh-coast.webp",
+      "description": "sushi",
+      "price": "$$$",
+      "rating": 3.58,
+      "ratingData": [
+        5,
+        5,
+        4,
+        5,
+        3,
+        1,
+        4,
+        4,
+        3,
+        2,
+        4,
+        3
+      ],
+      "ratingcount": 12,
+      "comment": "",
+      "id": 1,
+      "userrating": ""
+    }
+  ]
 }
