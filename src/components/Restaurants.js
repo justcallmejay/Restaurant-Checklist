@@ -15,7 +15,10 @@ const renderMyVisits = (place) => {
             headers: {
                 "Content-Type" : "application/json"
             },
-            body: JSON.stringify(place)
+            body: JSON.stringify({
+                ...place,
+            userrating: ''
+            })
         })
     }    
     
