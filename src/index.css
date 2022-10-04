@@ -142,6 +142,21 @@ NewRestaurant.js
   align-items: center;
 }
 
+.text-info .input-box {
+  margin: 10px auto;
+}
+
+.restaurant-list img {
+  max-width: 100%;
+  max-height: 50%;
+  flex-direction: column;
+  align-content: center;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+
+
 /*
 Restaurant.js, RestaurantCard.js
 */
@@ -189,7 +204,11 @@ Restaurant.js, RestaurantCard.js
 
 .restaurant-list  {
   top: 100px;
-  max-width: 1300px;
+  left: 40%;
+  width: 30%;
+  min-height: 70%;
+  background-color: rgba(255, 255, 255, 0.4);
+  position: fixed
 }
 
 #message {
