@@ -7,20 +7,20 @@ function Footer() {
                 <div className="row">
                     <div className="col">
                         <ul className="list-unstyled">
-                            <li>Location:</li>
-                            <li>Someplace, United States</li>
-                            <li>555 Some Street, Somewerville</li>
+                            <li key="location">Location:</li>
+                            <li key="street-address">555 Some Street, Somewerville</li>
+                            <li key="city">Someplace, United States</li>
                         </ul>
                     </div>
                     <div className="col">
                         <ul className="list-unstyled">
-                            <li>Contact Us:</li>
-                            <li>Phone number: 555-555-5555</li>
-                            <li>Email: someemail@somemail.com</li>
-                            <a href="https://facebook.com"><i class="fab fa-facebook-f"></i></a>
-                            <a href="https://twitter.com"><i class="fab fa-twitter"></i></a>
-                            <a href="https://instagram.com"><i class="fab fa-instagram"></i></a>
-                            <a href="https://linkedin.com"><i class="fab fa-linkedin-in"></i></a>
+                            <li key="contact">Contact Us:</li>
+                            <li key="phone">Phone number: 555-555-5555</li>
+                            <li key="email">Email: someemail@somemail.com</li>
+                            <a href="https://facebook.com"><i className="fab fa-facebook-f"></i></a>
+                            <a href="https://twitter.com"><i className="fab fa-twitter"></i></a>
+                            <a href="https://instagram.com"><i className="fab fa-instagram"></i></a>
+                            <a href="https://linkedin.com"><i className="fab fa-linkedin-in"></i></a>
                         </ul>
                     </div>
                 </div>
