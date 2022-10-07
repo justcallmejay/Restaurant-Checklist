@@ -49,7 +49,7 @@ function handleNewRestaurant(inputRestaurant) {
           <Restaurants restaurant={restaurant} setRestaurant={setRestaurant} myVisits={myVisits} setMyVisits={setMyVisits}/>
           {/* )} */}
         </Route>
-        <Route path="/my-favorites">
+        <Route path="/my-visits">
           <MyFavorites myVisits={myVisits} setMyVisits={setMyVisits} restaurant={restaurant} />
         </Route>
         <Route path="/add-restaurant">

@@ -38,10 +38,10 @@ function NavBar() {
             </NavLink>
             
             <NavLink
-            to="/my-favorites"
+            to="/my-visits"
             exact style={linkStyles}
             activeStyle={activeLink}
-            >My Favorites
+            >My Visits
             </NavLink>
             
             <NavLink

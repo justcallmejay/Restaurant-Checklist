@@ -149,6 +149,8 @@ NewRestaurant.js
 
 .text-info .input-box {
   margin: 10px auto;
+  left: 60px;
+  position: relative;
 }
 
 .restaurant-list img {
