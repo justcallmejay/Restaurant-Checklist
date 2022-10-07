@@ -4,7 +4,7 @@ import UserComment from "./UserComment";
 import VisitCount from "./VisitCount";
 import DeleteCard from "./DeleteCard"
 
-function MyFavorites( { myVisits, setMyVisits, restaurant, setRestaurant } ) {
+function MyFavorites( { myVisits, setMyVisits, restaurant } ) {
 
     const [renderComment, setRenderComment] = useState('')
     const [ratePlace, setRatePlace] = useState(null)
@@ -46,7 +46,7 @@ function MyFavorites( { myVisits, setMyVisits, restaurant, setRestaurant } ) {
             renderComment={renderComment} setRenderComment={setRenderComment}/>
         <VisitCount visit={visit}/>
         <DeleteCard 
-            myVisits={myVisits} setMyVisits={setMyVisits} visit={visit} restaurant={restaurant} setRestaurant={setRestaurant}/>
+            myVisits={myVisits} setMyVisits={setMyVisits} visit={visit} restaurant={restaurant} />
         </div>
         </div>
         )}

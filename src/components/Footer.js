@@ -27,7 +27,7 @@ function Footer() {
                 <hr />
                 <div className="row">
                     <p className="col-sm">
-                        &copy;{new Date().getFullYear()} Jay's Project | All right reserved | Terms Of Service | Privacy
+                        &copy;{new Date().getFullYear()} Project by justcallmejay | All right reserved | Terms Of Service | Privacy
                     </p>
                 </div>
             </div>
