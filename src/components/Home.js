@@ -31,10 +31,13 @@ function Home() {
     }, [index]);
 
     return (
-        // <div className="home">
-        //     <div className="home-text">
-        //     <h1>Welcome to Eat-Go</h1>
-        //     <p>A site where you can explore the restaurants at your local area.  After taking a journey to the restaurant, their food, atmosphere, services, you can mark as complete and share your experience afterwards!</p>
+        <div className="home">
+            <div className="home-container">
+                <div className="home-text">
+                    <h1>Eat-Go</h1>
+                    <p>Explore the restaurants around your local area.  Track your visits and share your experiences (food, services, atmosphere) to your friends.</p>
+                </div>
+            </div>
         <div className="slideshow">
             <div className="slideshowSlider" style={{ transform: `translate3d(${-index * 100}%, 0, 0)` }}>
                     {homeImage.map((index) => (<img
@@ -56,9 +59,9 @@ function Home() {
         ></div>
         ))}
       </div>
+
     </div>
-    //     </div>
-    // </div>
+    </div>
     )
 }
 

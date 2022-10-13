@@ -35,18 +35,23 @@ Home
 }
 
 .home {
-  /* top: 8%;
   left: 5%;
-  height: 75%;
-  width: 90%;
+  height: 100%;
   background-color: rgba(255, 255, 255, 0.2);
   border-radius: 15px;
   align-items: center;
   justify-content: center;
-  position: absolute; */
-  /* margin: 0 auto;
+  position: fixed;
+  margin: 0 auto;
   overflow: hidden;
-  max-width: 500px; */
+  min-width: 90%;
+}
+
+.home-text {
+  top: 30%;
+  left: 9%;
+  max-width: 30%;
+  position: absolute;
 }
 
 .slideshow {
@@ -192,7 +197,7 @@ Restaurant.js, RestaurantCard.js
 }
 
 .explore, .myFavorites {
-  min-height: 600px;
+  min-height: 625px;
   width: 300px;
   border: inset gray 1px;
   margin: 5px;

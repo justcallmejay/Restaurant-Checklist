@@ -17,7 +17,8 @@ const renderMyVisits = (place) => {
             },
             body: JSON.stringify({
                 ...place,
-            userrating: ''
+            userrating: '',
+            visitCounter: 0
             })
         })
     }    

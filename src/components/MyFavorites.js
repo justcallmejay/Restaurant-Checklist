@@ -2,7 +2,8 @@ import React, { useEffect, useState } from "react";
 import UserRating from "./UserRating";
 import UserComment from "./UserComment";
 import VisitCount from "./VisitCount";
-import DeleteCard from "./DeleteCard"
+import DeleteCard from "./DeleteCard";
+import SortFavorites from "./SortFavorites"
 
 function MyFavorites( { myVisits, setMyVisits, restaurant } ) {
 
@@ -17,10 +18,22 @@ function MyFavorites( { myVisits, setMyVisits, restaurant } ) {
         .then(myVisits => setMyVisits(myVisits))
     }, [renderComment, ratePlace, setMyVisits])
 
+    function renderVisits() {
+        if (myVisits.length !== 0) {
+            return (
+                <>
+            <h3>Here are the list of places that you have visited.</h3>
+            <SortFavorites myVisits={myVisits} setMyVisits={setMyVisits}/>
+            </>)
+        } else {
+            return (<h3>Start your profile by checking the Restaurants page!</h3>)
+        }
+    }
+
     return (
     <>
     <div className="restaurant-pagetitle">
-        <h3>Here are the list of places that you have visited.</h3>
+        {renderVisits()}
     </div>
         <div className="restaurant-container">
         {myVisits.map(visit => 

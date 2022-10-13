@@ -6,7 +6,7 @@
       "image": "/image/fresh-coast.webp",
       "description": "sushi",
       "price": "$$$",
-      "rating": 3.6153846153846154,
+      "rating": 3.5833333333333335,
       "ratingData": [
         5,
         5,
@@ -19,10 +19,9 @@
         3,
         2,
         4,
-        3,
-        4
+        3
       ],
-      "ratingcount": 13,
+      "ratingcount": 12,
       "comment": "",
       "id": 1
     },
@@ -32,7 +31,7 @@
       "image": "/image/halal-guys.jpg",
       "description": "gyro",
       "price": "$$",
-      "rating": 3.25,
+      "rating": 3.2222222222222223,
       "ratingData": [
         4,
         5,
@@ -42,12 +41,9 @@
         1,
         2,
         4,
-        5,
-        3,
-        3,
-        4
+        5
       ],
-      "ratingcount": 12,
+      "ratingcount": 9,
       "comment": "",
       "id": 2
     },
@@ -57,18 +53,15 @@
       "image": "/image/sushi-village.jpg",
       "description": "sushi",
       "price": "$$$",
-      "rating": 4.25,
+      "rating": 4.6,
       "ratingData": [
         4,
         5,
         5,
         4,
-        5,
-        3,
-        4,
-        4
+        5
       ],
-      "ratingcount": 8,
+      "ratingcount": 5,
       "comment": "",
       "id": 3
     },
@@ -78,7 +71,7 @@
       "image": "/image/ralphs-pizzeria.webp",
       "description": "pizza",
       "price": "$",
-      "rating": 3.1666666666666665,
+      "rating": 3.2222222222222223,
       "ratingData": [
         4,
         5,
@@ -87,12 +80,9 @@
         3,
         3,
         4,
-        2,
-        3,
-        3,
-        3
+        2
       ],
-      "ratingcount": 12,
+      "ratingcount": 9,
       "comment": "",
       "id": 4
     },
@@ -102,19 +92,16 @@
       "image": "/image/white-manna.jpg",
       "description": "burger",
       "price": "$$",
-      "rating": 4.222222222222222,
+      "rating": 4.5,
       "ratingData": [
         4,
         4,
         5,
         5,
         4,
-        5,
-        3,
-        5,
-        3
+        5
       ],
-      "ratingcount": 9,
+      "ratingcount": 6,
       "comment": "I enjoyed their burger.  You should really try it out!",
       "id": 5
     },
@@ -124,19 +111,16 @@
       "image": "/image/bbq-pulled-brisket-burger.png",
       "description": "burger",
       "price": "$$$",
-      "rating": 4.2,
+      "rating": 4.333333333333333,
       "ratingData": [
         4,
         4,
         3,
         5,
         5,
-        5,
-        4,
-        3,
         5
       ],
-      "ratingcount": 9,
+      "ratingcount": 6,
       "comment": "",
       "id": 6
     },
@@ -146,19 +130,16 @@
       "image": "/image/east-gate-sushi.jpg",
       "description": "sushi",
       "price": "$$$",
-      "rating": 3.77,
+      "rating": 3.8333333333333335,
       "ratingData": [
         4,
         4,
         5,
         3,
         4,
-        3,
-        5,
-        3,
         3
       ],
-      "ratingcount": 9,
+      "ratingcount": 6,
       "comment": "",
       "id": 7
     },
@@ -168,7 +149,7 @@
       "image": "https://images.squarespace-cdn.com/content/v1/5d87e8a2ad4c994bf6ea01ae/1593449942468-YE5WD63I45WDQIZ6Z81V/image-asset.jpeg",
       "description": "diner",
       "price": "$$",
-      "rating": 4.4,
+      "rating": 4.571428571428571,
       "ratingData": [
         4,
         4,
@@ -176,12 +157,9 @@
         5,
         4,
         5,
-        5,
-        3,
-        5,
-        4
+        5
       ],
-      "ratingcount": 10,
+      "ratingcount": 7,
       "comment": "",
       "id": 8
     },
@@ -191,19 +169,16 @@
       "image": "https://www.nj.com/resizer/jLp8oErBrgCZDgnmApj2i0KhI9M=/1280x0/smart/advancelocal-adapter-image-uploads.s3.amazonaws.com/image.nj.com/home/njo-media/width2048/img/jerseysbest/photo/2018/08/01/24739486-standard.jpg",
       "description": "beef",
       "price": "$",
-      "rating": 3.77,
+      "rating": 3.8333333333333335,
       "ratingData": [
         4,
         4,
         5,
         3,
         4,
-        3,
-        5,
-        3,
         3
       ],
-      "ratingcount": 9,
+      "ratingcount": 6,
       "comment": "",
       "id": 9
     },
@@ -213,18 +188,15 @@
       "image": "https://i0.wp.com/newjerseyisntboring.com/wp-content/uploads/2019/04/IMG_3397.jpg?resize=800%2C445&ssl=1",
       "description": "diner",
       "price": "$$",
-      "rating": 3.875,
+      "rating": 4,
       "ratingData": [
         4,
         4,
         5,
         3,
-        4,
-        3,
-        5,
-        3
+        4
       ],
-      "ratingcount": 8,
+      "ratingcount": 5,
       "comment": "",
       "id": 10
     },
@@ -234,7 +206,7 @@
       "image": "https://www.gannett-cdn.com/-mm-/ac138ae3e5d56d378a81ec1264d6a985fa02c339/c=0-0-1536-2048/local/-/media/2017/12/13/NJGroup/Bridgewater/636487563226851905-25075099-1747494505283283-9059816236886704156-o.jpg?width=660&height=880&fit=crop&format=pjpg&auto=webp",
       "description": "pizza",
       "price": "$$",
-      "rating": 4.45,
+      "rating": 4.625,
       "ratingData": [
         4,
         4,
@@ -243,12 +215,9 @@
         4,
         5,
         5,
-        5,
-        3,
-        5,
-        4
+        5
       ],
-      "ratingcount": 11,
+      "ratingcount": 8,
       "comment": "",
       "id": 11
     },
@@ -258,19 +227,16 @@
       "image": "https://bigseventravel.com/wp-content/uploads/2019/05/Screenshot-2019-05-07-at-13.09.05.png",
       "description": "burger",
       "price": "$$",
-      "rating": 4.33,
+      "rating": 4.5,
       "ratingData": [
         4,
         5,
         5,
         5,
         4,
-        4,
-        5,
-        4,
-        3
+        4
       ],
-      "ratingcount": 9,
+      "ratingcount": 6,
       "comment": "",
       "id": 12
     },
@@ -280,19 +246,16 @@
       "image": "https://media-cdn.grubhub.com/image/upload/d_search:browse-images:default.jpg/w_150,q_auto:low,fl_lossy,dpr_2.0,c_fill,f_auto,h_130,g_auto/l2mlm2wauxvq1tcw1wqm",
       "description": "veggie",
       "price": "$$",
-      "rating": 4.00,
+      "rating": 4,
       "ratingData": [
         4,
         4,
         5,
         3,
         4,
-        4,
-        5,
-        3,
         4
       ],
-      "ratingcount": 9,
+      "ratingcount": 6,
       "comment": "",
       "id": 13
     },
@@ -302,19 +265,16 @@
       "image": "https://images.squarespace-cdn.com/content/v1/5baa48d7809d8e17b29d47c8/1565573054201-S3DFY2QIIJWBP10EDYT8/UVK_Breakfast_Sandwich.jpg",
       "description": "vegan",
       "price": "$$",
-      "rating": 3.7777777777777777,
+      "rating": 3.8333333333333335,
       "ratingData": [
         4,
         4,
         5,
         3,
         4,
-        3,
-        5,
-        3,
         3
       ],
-      "ratingcount": 9,
+      "ratingcount": 6,
       "comment": "",
       "id": 14
     },
@@ -324,17 +284,14 @@
       "image": "http://veggieheaventeaneck.com/wp-content/uploads/2014/09/Veggie-heaven-Chow-Mein-408-1080x675.jpg",
       "description": "vegan",
       "price": "$$",
-      "rating": 4.14,
+      "rating": 4,
       "ratingData": [
         4,
         4,
         5,
-        3,
-        4,
-        4,
-        5
+        3
       ],
-      "ratingcount": 7,
+      "ratingcount": 4,
       "comment": "",
       "id": 15
     },
@@ -344,17 +301,14 @@
       "image": "https://www.nj.com/resizer/h1UDEMjVhfK1lcGT8xj3Kw1XgJY=/800x0/smart/cloudfront-us-east-1.images.arcpublishing.com/advancelocal/TDQISJDPO5EU5LNXHFK774TGHE.jpg",
       "description": "beef",
       "price": "$$",
-      "rating": 4.14,
+      "rating": 4,
       "ratingData": [
         4,
         4,
         5,
-        3,
-        4,
-        4,
-        5
+        3
       ],
-      "ratingcount": 7,
+      "ratingcount": 4,
       "comment": "",
       "id": 16
     },
@@ -364,17 +318,14 @@
       "image": "https://static.wixstatic.com/media/f4c4bd_0e68cc25d39640c19f83d2d8e3de349b~mv2.jpeg/v1/fill/w_1259,h_885,fp_0.50_0.50,q_85,usm_0.66_1.00_0.01,enc_auto/f4c4bd_0e68cc25d39640c19f83d2d8e3de349b~mv2.jpeg",
       "description": "gyro",
       "price": "$$",
-      "rating": 4.14,
+      "rating": 4,
       "ratingData": [
         4,
         4,
         5,
-        3,
-        4,
-        4,
-        5
+        3
       ],
-      "ratingcount": 7,
+      "ratingcount": 4,
       "comment": "",
       "id": 17
     },
@@ -384,17 +335,14 @@
       "image": "https://media-cdn.tripadvisor.com/media/photo-s/1c/f4/1a/11/gyro-joint-nj.jpg",
       "description": "gyro",
       "price": "$$",
-      "rating": 4.14,
+      "rating": 4,
       "ratingData": [
         4,
         4,
         5,
-        3,
-        4,
-        4,
-        5
+        3
       ],
-      "ratingcount": 7,
+      "ratingcount": 4,
       "comment": "",
       "id": 18
     },
@@ -404,17 +352,14 @@
       "image": "https://atacoaffair.com/wp-content/uploads/2022/02/Best-Tacos-in-Nj.jpg",
       "description": "taco",
       "price": "$$",
-      "rating": 4.14,
+      "rating": 4,
       "ratingData": [
         4,
         4,
         5,
-        3,
-        4,
-        4,
-        5
+        3
       ],
-      "ratingcount": 7,
+      "ratingcount": 4,
       "comment": "",
       "id": 19
     },
@@ -424,17 +369,14 @@
       "image": "https://scontent-lga3-2.xx.fbcdn.net/v/t39.30808-6/309525224_500116222125241_2282393344155292650_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=730e14&_nc_ohc=e2a33l-mjvEAX99cDPk&_nc_ht=scontent-lga3-2.xx&oh=00_AT-OF2-8vxGjkcsiu-7GDrXf4LWoznYVsrlRIQrj_wwBeg&oe=6343E967",
       "description": "fish",
       "price": "$$$",
-      "rating": 4.14,
+      "rating": 4,
       "ratingData": [
         4,
         4,
         5,
-        3,
-        4,
-        4,
-        5
+        3
       ],
-      "ratingcount": 7,
+      "ratingcount": 4,
       "comment": "",
       "id": 20
     }
