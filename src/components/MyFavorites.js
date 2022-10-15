@@ -9,6 +9,7 @@ function MyFavorites( { myVisits, setMyVisits, restaurant } ) {
 
     const [renderComment, setRenderComment] = useState('')
     const [ratePlace, setRatePlace] = useState(null)
+    // const [sortFavorites, setSortFavorites] = useState('')
 
     console.log(myVisits)
 
@@ -16,14 +17,18 @@ function MyFavorites( { myVisits, setMyVisits, restaurant } ) {
         fetch('http://localhost:4000/user')
         .then(res => res.json())
         .then(myVisits => setMyVisits(myVisits))
-    }, [renderComment, ratePlace])
+    }, [
+        renderComment, 
+        ratePlace, 
+        // sortFavorites
+    ])
 
     function renderVisits() {
         if (myVisits.length !== 0) {
             return (
                 <>
             <h3>Here are the list of places that you have visited.</h3>
-            <SortFavorites myVisits={myVisits} setMyVisits={setMyVisits}/>
+            {/* <SortFavorites myVisits={myVisits} setMyVisits={setMyVisits} sortFavorites={sortFavorites} setSortFavorites={setSortFavorites}/> */}
             </>)
         } else {
             return (<h3>Start your profile by checking the Restaurants page!</h3>)
