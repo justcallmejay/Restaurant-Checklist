@@ -404,34 +404,10 @@
         3
       ],
       "ratingcount": 12,
-      "comment": "",
+      "comment": "Food is really delicious!",
       "id": 1,
       "userrating": "",
-      "visitCounter": 4
-    },
-    {
-      "name": "Halal Guys",
-      "location": 3.5,
-      "image": "/image/halal-guys.jpg",
-      "description": "gyro",
-      "price": "$$",
-      "rating": 3.2222222222222223,
-      "ratingData": [
-        4,
-        5,
-        3,
-        3,
-        2,
-        1,
-        2,
-        4,
-        5
-      ],
-      "ratingcount": 9,
-      "comment": "",
-      "id": 2,
-      "userrating": "",
-      "visitCounter": 2
+      "visitCounter": 1
     }
   ]
 }

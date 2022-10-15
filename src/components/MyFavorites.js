@@ -5,7 +5,7 @@ import VisitCount from "./VisitCount";
 import DeleteCard from "./DeleteCard";
 import SortFavorites from "./SortFavorites"
 
-function MyFavorites( { myVisits, setMyVisits, restaurant, addRestaurant } ) {
+function MyFavorites( { myVisits, setMyVisits, restaurant } ) {
 
     const [renderComment, setRenderComment] = useState('')
     const [ratePlace, setRatePlace] = useState(null)
@@ -16,7 +16,7 @@ function MyFavorites( { myVisits, setMyVisits, restaurant, addRestaurant } ) {
         fetch('http://localhost:4000/user')
         .then(res => res.json())
         .then(myVisits => setMyVisits(myVisits))
-    }, [renderComment, ratePlace, addRestaurant])
+    }, [renderComment, ratePlace])
 
     function renderVisits() {
         if (myVisits.length !== 0) {
@@ -57,7 +57,7 @@ function MyFavorites( { myVisits, setMyVisits, restaurant, addRestaurant } ) {
         <UserComment 
             myVisits={myVisits} visit={visit} 
             renderComment={renderComment} setRenderComment={setRenderComment}/>
-        <VisitCount visit={visit} setMyVisits={setMyVisits}/>
+        <VisitCount visit={visit} />
         <DeleteCard 
             myVisits={myVisits} setMyVisits={setMyVisits} visit={visit} restaurant={restaurant} />
         </div>
