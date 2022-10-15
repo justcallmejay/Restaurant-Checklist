@@ -62,7 +62,7 @@ function MyFavorites( { myVisits, setMyVisits, restaurant } ) {
         <UserComment 
             myVisits={myVisits} visit={visit} 
             renderComment={renderComment} setRenderComment={setRenderComment}/>
-        <VisitCount visit={visit} />
+        <VisitCount visit={visit} setMyVisits={setMyVisits}/>
         <DeleteCard 
             myVisits={myVisits} setMyVisits={setMyVisits} visit={visit} restaurant={restaurant} />
         </div>
