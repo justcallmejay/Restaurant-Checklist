@@ -193,10 +193,9 @@
         4,
         4,
         5,
-        3,
-        4
+        3
       ],
-      "ratingcount": 5,
+      "ratingcount": 4,
       "comment": "",
       "id": 10
     },
@@ -379,6 +378,20 @@
       "ratingcount": 4,
       "comment": "",
       "id": 20
+    },
+    {
+      "name": "Ice Cream",
+      "location": 2,
+      "image": "https://miro.medium.com/max/1100/0*_whxA4CEuPShuvpS",
+      "description": "beef",
+      "price": "$$",
+      "rating": 4,
+      "ratingData": [
+        4
+      ],
+      "ratingcount": 1,
+      "comment": "",
+      "id": 21
     }
   ],
   "user": []

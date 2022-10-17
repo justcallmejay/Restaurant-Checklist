@@ -46,14 +46,28 @@ function handleNewRestaurant(inputRestaurant) {
       <Switch>
         <Route path="/restaurants">
           {/* {restaurant.map(food => */}
-          <Restaurants restaurant={restaurant} setRestaurant={setRestaurant} myVisits={myVisits} setMyVisits={setMyVisits}/>
+          <Restaurants 
+            restaurant={restaurant} 
+            setRestaurant={setRestaurant} 
+            myVisits={myVisits} 
+            setMyVisits={setMyVisits}
+            />
           {/* )} */}
         </Route>
         <Route path="/my-visits">
-          <MyFavorites myVisits={myVisits} setMyVisits={setMyVisits} restaurant={restaurant} />
+          <MyFavorites 
+            myVisits={myVisits} 
+            setMyVisits={setMyVisits} 
+            restaurant={restaurant} 
+          />
         </Route>
         <Route path="/add-restaurant">
-          <NewRestaurant handleNewRestaurant={handleNewRestaurant} addRestaurant={addRestaurant} setAddRestaurant={setAddRestaurant} initialStateForm={initialStateForm}
+          <NewRestaurant 
+            restaurant={restaurant}
+            handleNewRestaurant={handleNewRestaurant} 
+            addRestaurant={addRestaurant} 
+            setAddRestaurant={setAddRestaurant} 
+            initialStateForm={initialStateForm}
           />
         </Route>
         <Route path="/">

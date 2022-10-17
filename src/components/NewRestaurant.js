@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import { addRestImg } from "../image.js"
 
-function NewRestaurant( { handleNewRestaurant, addRestaurant, setAddRestaurant, initialStateForm } ) {
+function NewRestaurant( { restaurant, handleNewRestaurant, addRestaurant, setAddRestaurant, initialStateForm } ) {
 
 const [thanks, setThanks] = useState('')
+const [checkBox, setCheckBox] = useState(false)
 
 const handleOnChange = (e) => {
     const { name, value } = e.target;
@@ -38,10 +39,21 @@ function handleSubmit(e) {
             location: parseInt(addRestaurant.location),
             rating: parseInt(addRestaurant.rating),
             ratingData: [parseInt(addRestaurant.rating)],
-            comment: "",
-            ratingcount: 1
+            ratingcount: 1,
+            comment: ""
         })
     })
+    renderThanks();
+    }
+}
+
+function addToVisit() {
+        if (addRestaurant.name === "" && addRestaurant.location === "" && addRestaurant.rating === "") {
+            alert('Please fill in the boxes below');
+            setCheckBox(checkBox)
+        } else {
+            setCheckBox(!checkBox);
+            if (!checkBox) {
     fetch('http://localhost:4000/user', {
         method: "POST",
         headers: {
@@ -52,14 +64,15 @@ function handleSubmit(e) {
             location: parseInt(addRestaurant.location),
             rating: parseInt(addRestaurant.rating),
             ratingData: [parseInt(addRestaurant.rating)],
-            comment: "",
             ratingcount: 1,
+            comment: "",
             userrating: parseInt(addRestaurant.rating),
-            visit: parseInt(0)
+            visitCounter: parseInt(1),
+            id: restaurant.length + 1
+            })
         })
-    })
-    renderThanks();
     }
+}
 }
 
 //Needs to render (ie: run GET request)
@@ -101,6 +114,7 @@ return (
                 </div>
         <div className="text-info-box">Type:&nbsp;
         <select className="dropdown"
+        name="description"
         value={addRestaurant.description} 
         onChange={handleOnChange}>
             <option value=""></option>
@@ -133,6 +147,7 @@ return (
                 <option value="4">4</option>
                 <option value="5">5</option>
             </select></div>
+            <input type="checkbox" onClick={addToVisit}/>Add to My Page
         <div><button id="submit-button">Submit</button></div>
         <div><h4>{thanks}</h4></div>
         </div>
