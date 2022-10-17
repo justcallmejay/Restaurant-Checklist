@@ -6,6 +6,8 @@ function NewRestaurant( { restaurant, handleNewRestaurant, addRestaurant, setAdd
 const [thanks, setThanks] = useState('')
 const [checkBox, setCheckBox] = useState(false)
 
+console.log(checkBox)
+
 const handleOnChange = (e) => {
     const { name, value } = e.target;
 
@@ -17,14 +19,20 @@ setAddRestaurant(restaurant => {
     })
 }
 
+const conditional = (
+    addRestaurant.name === "" 
+    // && addRestaurant.location === "" 
+    // && addRestaurant.rating === "" 
+    // && addRestaurant.description === ""
+    )
+
 function handleSubmit(e) {
     e.preventDefault();
 
     const renderThanks = () => {
         setThanks('Thank you for your submission!')
     }
-
-    if (addRestaurant.name === "" && addRestaurant.location === "" && addRestaurant.rating === "") {
+    if (conditional) {
         alert('Please fill in the boxes below')
     } else {
     handleNewRestaurant(addRestaurant)
@@ -43,37 +51,38 @@ function handleSubmit(e) {
             comment: ""
         })
     })
+        if (checkBox === true) {
+        fetch('http://localhost:4000/user', {
+            method: "POST",
+            headers: {
+                "Content-Type" : "application/json"
+            },
+            body: JSON.stringify({
+                ...addRestaurant,
+                location: parseInt(addRestaurant.location),
+                rating: parseInt(addRestaurant.rating),
+                ratingData: [parseInt(addRestaurant.rating)],
+                ratingcount: 1,
+                comment: "",
+                userrating: parseInt(addRestaurant.rating),
+                visitCounter: parseInt(1),
+                id: restaurant.length + 1
+                })
+            })
+        }
     renderThanks();
     }
 }
 
-function addToVisit() {
-        if (addRestaurant.name === "" && addRestaurant.location === "" && addRestaurant.rating === "") {
-            alert('Please fill in the boxes below');
-            setCheckBox(checkBox)
-        } else {
-            setCheckBox(!checkBox);
-            if (!checkBox) {
-    fetch('http://localhost:4000/user', {
-        method: "POST",
-        headers: {
-            "Content-Type" : "application/json"
-        },
-        body: JSON.stringify({
-            ...addRestaurant,
-            location: parseInt(addRestaurant.location),
-            rating: parseInt(addRestaurant.rating),
-            ratingData: [parseInt(addRestaurant.rating)],
-            ratingcount: 1,
-            comment: "",
-            userrating: parseInt(addRestaurant.rating),
-            visitCounter: parseInt(1),
-            id: restaurant.length + 1
-            })
-        })
-    }
-}
-}
+// function addToVisit() {
+//         if (conditional) {
+//             alert('Please fill in the boxes below');
+//         } else {
+//             setCheckBox(!checkBox);
+
+//     }
+// }
+// }
 
 //Needs to render (ie: run GET request)
 
@@ -147,7 +156,7 @@ return (
                 <option value="4">4</option>
                 <option value="5">5</option>
             </select></div>
-            <input type="checkbox" onClick={addToVisit}/>Add to My Page
+            <input type="checkbox" onChange={() => setCheckBox(!checkBox)}/>Add to My Page
         <div><button id="submit-button">Submit</button></div>
         <div><h4>{thanks}</h4></div>
         </div>
