@@ -71,6 +71,7 @@ return (
     <img src={addRestImg }/>
         <h3>Discovered a New Restaurant?  Tell us below!</h3>
         <p>After submission, we will search for the restaurant to ensure information provided are correct and up-to-date.  Thank you for helping us grow our site!</p>
+        <div className="new-restaurant-container">
         <div className="text-info">Restaurant Name:&nbsp;
         <input 
         className="input-box" 
@@ -98,8 +99,8 @@ return (
         value={addRestaurant.image} 
         onChange={handleOnChange}/>
                 </div>
-        <div className="text-info">Type:&nbsp;
-        <select 
+        <div className="text-info-box">Type:&nbsp;
+        <select className="dropdown"
         value={addRestaurant.description} 
         onChange={handleOnChange}>
             <option value=""></option>
@@ -115,16 +116,16 @@ return (
             <option value="taco">Taco</option>
             <option value="vegan">Vegan</option>
             <option value="veggie">Veggie</option>
-        </select>
-        <div className="text-info">Price:&nbsp;
-            <select name="price" value={addRestaurant.price} onChange={handleOnChange}>
+        </select></div>
+        <div className="text-info-box">Price:&nbsp;
+            <select name="price" className="dropdown" value={addRestaurant.price} onChange={handleOnChange}>
                 <option value=""></option>
                 <option value="$">$</option>
                 <option value="$$">$$</option>
                 <option value="$$$">$$$</option>
             </select></div>
-        <div className="text-info">Your rating:&nbsp;
-            <select name="rating" value={addRestaurant.rating} onChange={handleOnChange}>
+        <div className="text-info-box">Your rating:&nbsp;
+            <select name="rating" className="dropdown" value={addRestaurant.rating} onChange={handleOnChange}>
                 <option value=""></option>
                 <option value="1">1</option>
                 <option value="2">2</option>
@@ -132,7 +133,7 @@ return (
                 <option value="4">4</option>
                 <option value="5">5</option>
             </select></div>
-        <div><button>Submit</button></div>
+        <div><button id="submit-button">Submit</button></div>
         <div><h4>{thanks}</h4></div>
         </div>
     </form>

@@ -136,12 +136,16 @@ App.js
   box-sizing: border-box;
   z-index: 3;
 }
+.container {
+  text-align: center;
+}
 
 /*
 NewRestaurant.js
 */
-.container {
-  text-align: center;
+
+.new-restaurant-container {
+  flex-direction: row;
 }
 
 .restaurant-list {
@@ -152,10 +156,37 @@ NewRestaurant.js
   align-items: center;
 }
 
-.text-info .input-box {
+.text-info {
   margin: 10px auto;
-  left: 60px;
+  right: 0px;
   position: relative;
+}
+
+.input-box {
+  float: right;
+  right: 20%;
+  position: relative
+}
+
+.text-info-box {
+  margin: 5px auto;
+  left: -70px;
+  position: relative;
+}
+
+.dropdown {
+  width: 70px;
+  left: 227px;
+  position: relative;
+  float: left
+}
+
+#submit-button {
+  margin-top: 20px;
+  left: 40%;
+  position: relative;
+  background-color: white;
+  border-radius: 5px;
 }
 
 .restaurant-list img {
@@ -166,8 +197,6 @@ NewRestaurant.js
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
 }
-
-
 
 /*
 Restaurant.js, RestaurantCard.js
