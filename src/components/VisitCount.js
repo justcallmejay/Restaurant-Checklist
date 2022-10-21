@@ -45,7 +45,7 @@ export default function VisitCount( { visit, setMyVisits } ) {
         setDisable(!disable)
         setVisitDate(today)
         if (!disable) {
-            setInterval(() => {setDisable(disable)}, 1000)
+            setInterval(() => {setDisable(disable)}, 1440000)
             setCountDown("(Wait 3 at least hours to click '+' button again)")
 }}
 

@@ -8,8 +8,7 @@ function Restaurants( { restaurant, setRestaurant, myVisits, setMyVisits } ) {
 const renderMyVisits = (place) => {
         if (!myVisits.includes(place)) {
             const renderRestaurant = [...myVisits, place]
-            setMyVisits(renderRestaurant)
-        }
+            // setMyVisits(renderRestaurant)
         fetch('http://localhost:4000/user', {
             method: "POST",
             headers: {
@@ -21,7 +20,10 @@ const renderMyVisits = (place) => {
             visitCounter: 1
             })
         })
+        .then(res => res.json())
+        .then(setMyVisits(renderRestaurant))
     }    
+}
     
     const [filterRestaurant, setFilterRestaurant] = useState("All")
     const [filterPrice, setFilterPrice] = useState("All")
@@ -67,7 +69,7 @@ const renderMyVisits = (place) => {
         
         <div className="restaurant-container">
             {findRestaurant.map(food => 
-            <RestaurantCard food={food} renderMyVisits={renderMyVisits} />)}
+            <RestaurantCard food={food} key={food.id} renderMyVisits={renderMyVisits} />)}
         </div>
     </>
     )

@@ -38,6 +38,8 @@ function DeleteCard( { visit, myVisits, setMyVisits, restaurant } ) {
                 rating: newAvg
             })
         })
+        .then(res => res.json())
+        .then(() => deleteRestaurant(visit))
     }
 })}
 

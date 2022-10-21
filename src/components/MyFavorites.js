@@ -3,7 +3,7 @@ import UserRating from "./UserRating";
 import UserComment from "./UserComment";
 import VisitCount from "./VisitCount";
 import DeleteCard from "./DeleteCard";
-// import SortFavorites from "./SortFavorites"
+import SortFavorites from "./SortFavorites"
 
 function MyFavorites( { myVisits, setMyVisits, restaurant } ) {
 
@@ -20,7 +20,6 @@ function MyFavorites( { myVisits, setMyVisits, restaurant } ) {
     }, [
         renderComment, 
         ratePlace,
-        setMyVisits
         // sortFavorites
     ])
 

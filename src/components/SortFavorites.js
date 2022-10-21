@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 
 export default function SortFavorites( { myVisits, setMyVisits, sortFavorites, setSortFavorites } ) {
 
@@ -13,13 +13,13 @@ export default function SortFavorites( { myVisits, setMyVisits, sortFavorites, s
     function sortByVisitCount() {
         console.log('clicked')
         return [...myVisits].sort(function(a,b) {
-            return a.visitCounter - b.visitCounter
+            return b.visitCounter - a.visitCounter
         })
     }
 
     function sortByRatings() {
         return [...myVisits].sort(function(a,b) {
-            return a.userrating - b.userrating
+            return b.userrating - a.userrating
         })
     }
 
