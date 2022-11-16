@@ -8,7 +8,7 @@ export default function SortFavorites( { myVisits, setMyVisits, sortFavorites, s
         } else if (sortFavorites === "ratings") {
             setMyVisits(sortByRatings)
         }
-    })
+    }, [sortFavorites])
 
     function sortByVisitCount() {
         console.log('clicked')
@@ -22,6 +22,8 @@ export default function SortFavorites( { myVisits, setMyVisits, sortFavorites, s
             return b.userrating - a.userrating
         })
     }
+
+    // console.log(myVisits)
 
         return (
         <>

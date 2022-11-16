@@ -29,7 +29,7 @@ useEffect(() => {
     fetch('http://localhost:4000/restaurants')
     .then(res => res.json())
     .then(restaurants => setRestaurant(restaurants))
-}, [addRestaurant, myVisits])
+}, [addRestaurant])
 
 function handleNewRestaurant(inputRestaurant) {
   setRestaurant(place => {
@@ -58,7 +58,8 @@ function handleNewRestaurant(inputRestaurant) {
           <MyFavorites 
             myVisits={myVisits} 
             setMyVisits={setMyVisits} 
-            restaurant={restaurant} 
+            restaurant={restaurant}
+            setRestaurant={setRestaurant} 
           />
         </Route>
         <Route path="/add-restaurant">

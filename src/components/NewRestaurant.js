@@ -6,7 +6,7 @@ function NewRestaurant( { restaurant, handleNewRestaurant, addRestaurant, setAdd
 const [thanks, setThanks] = useState('')
 const [checkBox, setCheckBox] = useState(false)
 
-console.log(checkBox)
+// console.log(checkBox)
 
 const handleOnChange = (e) => {
     const { name, value } = e.target;
@@ -90,7 +90,7 @@ function handleSubmit(e) {
 return (
     <>
     <form className="restaurant-list" onSubmit={handleSubmit}>
-    <img src={addRestImg }/>
+    <img src={addRestImg}/>
         <h3>Discovered a New Restaurant?  Tell us below!</h3>
         <p>After submission, we will search for the restaurant to ensure information provided are correct and up-to-date.  Thank you for helping us grow our site!</p>
         <div className="new-restaurant-container">

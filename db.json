@@ -6,7 +6,7 @@
       "image": "/image/fresh-coast.webp",
       "description": "sushi",
       "price": "$$$",
-      "rating": 3.3846153846153846,
+      "rating": 3.6153846153846154,
       "ratingData": [
         5,
         5,
@@ -19,7 +19,8 @@
         3,
         2,
         4,
-        4
+        4,
+        3
       ],
       "ratingcount": 13,
       "comment": "",
@@ -31,7 +32,7 @@
       "image": "/image/halal-guys.jpg",
       "description": "gyro",
       "price": "$$",
-      "rating": 2.7,
+      "rating": 3,
       "ratingData": [
         4,
         5,
@@ -40,8 +41,9 @@
         2,
         1,
         2,
+        2,
         4,
-        3
+        4
       ],
       "ratingcount": 10,
       "comment": "",
@@ -53,13 +55,14 @@
       "image": "/image/sushi-village.jpg",
       "description": "sushi",
       "price": "$$$",
-      "rating": 3.6666666666666665,
+      "rating": 4.666666666666667,
       "ratingData": [
         4,
         5,
         5,
         4,
-        4
+        5,
+        5
       ],
       "ratingcount": 6,
       "comment": "",
@@ -71,18 +74,16 @@
       "image": "/image/ralphs-pizzeria.webp",
       "description": "pizza",
       "price": "$",
-      "rating": 3.2222222222222223,
+      "rating": 3.8333333333333335,
       "ratingData": [
         4,
         5,
         4,
         4,
         3,
-        3,
-        4,
-        2
+        3
       ],
-      "ratingcount": 9,
+      "ratingcount": 6,
       "comment": "",
       "id": 4
     },
@@ -387,7 +388,7 @@
       "image": "/image/fresh-coast.webp",
       "description": "sushi",
       "price": "$$$",
-      "rating": 3.3846153846153846,
+      "rating": 3.7142857142857144,
       "ratingData": [
         5,
         5,
@@ -400,12 +401,13 @@
         3,
         2,
         4,
-        4
+        4,
+        3
       ],
-      "ratingcount": 13,
+      "ratingcount": 14,
       "comment": "",
       "id": 1,
-      "userrating": 4,
+      "userrating": "",
       "visitCounter": 1
     },
     {
@@ -414,7 +416,7 @@
       "image": "/image/halal-guys.jpg",
       "description": "gyro",
       "price": "$$",
-      "rating": 2.7,
+      "rating": 3,
       "ratingData": [
         4,
         5,
@@ -423,13 +425,14 @@
         2,
         1,
         2,
+        2,
         4,
-        3
+        4
       ],
       "ratingcount": 10,
       "comment": "",
       "id": 2,
-      "userrating": 3,
+      "userrating": "",
       "visitCounter": 1
     },
     {
@@ -438,18 +441,19 @@
       "image": "/image/sushi-village.jpg",
       "description": "sushi",
       "price": "$$$",
-      "rating": 3.6666666666666665,
+      "rating": 4.666666666666667,
       "ratingData": [
         4,
         5,
         5,
         4,
-        4
+        5,
+        5
       ],
       "ratingcount": 6,
       "comment": "",
       "id": 3,
-      "userrating": 4,
+      "userrating": "",
       "visitCounter": 1
     }
   ]

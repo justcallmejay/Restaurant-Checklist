@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { AiOutlineFieldNumber, AiOutlineCheck } from "react-icons/ai"
 
 export default function UserRating( { myVisits, visit, ratePlace, setRatePlace } ) {
 
@@ -64,10 +65,10 @@ export default function UserRating( { myVisits, visit, ratePlace, setRatePlace }
                 <option value="4">4</option>
                 <option value="5">5</option>
             </select>
-            <button onClick={() => handleClick(visit.id)}>Submit Rate</button>
+            <button onClick={() => handleClick(visit.id)}><AiOutlineCheck/></button>
             </>
         ) : (
-        <button onClick={() => setRatePlace(visit.id)}>Rate</button>
+        <button onClick={() => setRatePlace(visit.id)}><AiOutlineFieldNumber/></button>
         )}
         </a>
     )

@@ -35,7 +35,7 @@ Home
 }
 
 .home {
-  left: 5%;
+  left: 10%;
   height: 100%;
   background-color: rgba(255, 255, 255, 0.2);
   border-radius: 15px;
@@ -55,7 +55,7 @@ Home
 }
 
 .slideshow {
-  top: 140px;
+  top: 80px;
   float: right;
   align-items: center;
   margin: 0 auto;
@@ -71,8 +71,7 @@ Home
 
 .slide {
   display: inline-block;
-
-  height: 800px;
+  height: 1000px;
   width: 100%;
   border-radius: 40px;
 }
@@ -150,7 +149,8 @@ NewRestaurant.js
 
 .restaurant-list {
   height: 700px;
-  width: 500px;
+  min-width: 500px;
+  max-width: 500px;
   border-radius: 15px;
   display: inline-block;
   align-items: center;
@@ -164,7 +164,7 @@ NewRestaurant.js
 
 .input-box {
   float: right;
-  right: 20%;
+  left: -173px;
   position: relative
 }
 
@@ -190,7 +190,7 @@ NewRestaurant.js
 }
 
 .restaurant-list img {
-  max-width: 100%;
+  width: 100%;
   max-height: 50%;
   flex-direction: column;
   align-content: center;

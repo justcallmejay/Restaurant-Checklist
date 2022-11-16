@@ -20,7 +20,11 @@ const renderMyVisits = (place) => {
             visitCounter: 1
             })
         })
-        .then(res => res.json())
+        .then(res => {
+            if (res.status === 500) {
+            alert("You already chose this restaurant")
+          }
+          return res.json()})
         .then(setMyVisits(renderRestaurant))
     }    
 }

@@ -5,34 +5,47 @@ import VisitCount from "./VisitCount";
 import DeleteCard from "./DeleteCard";
 import SortFavorites from "./SortFavorites"
 
-function MyFavorites( { myVisits, setMyVisits, restaurant } ) {
+function MyFavorites( { myVisits, setMyVisits, restaurant, setRestaurant } ) {
 
     const [renderComment, setRenderComment] = useState('')
     const [ratePlace, setRatePlace] = useState(null)
-    // const [sortFavorites, setSortFavorites] = useState('')
+    const [sortFavorites, setSortFavorites] = useState('')
 
-    console.log(myVisits)
+    // console.log(myVisits)
 
     useEffect(() => {
         fetch('http://localhost:4000/user')
         .then(res => res.json())
         .then(myVisits => setMyVisits(myVisits))
-    }, [
-        renderComment, 
-        ratePlace,
-        // sortFavorites
-    ])
+    }, [renderComment, ratePlace])
+
+    useEffect(() => {
+        fetch('http://localhost:4000/restaurants')
+        .then(res => res.json())
+        .then(res => setRestaurant(res))
+    }, [ratePlace])
 
     function renderVisits() {
         if (myVisits.length !== 0) {
             return (
                 <>
             <h3>Here are the list of places that you have visited.</h3>
-            {/* <SortFavorites myVisits={myVisits} setMyVisits={setMyVisits} sortFavorites={sortFavorites} setSortFavorites={setSortFavorites}/> */}
+            <SortFavorites myVisits={myVisits} setMyVisits={setMyVisits} sortFavorites={sortFavorites} setSortFavorites={setSortFavorites}/>
             </>)
         } else {
             return (<h3>Start your profile by checking the Restaurants page!</h3>)
         }
+    }
+
+    function handleEditComment(place) {
+        const editComment = myVisits.map(visit => {
+            if (visit.id === place.id) {
+                return place
+            } else {
+                return visit
+            }
+        })
+        setMyVisits(editComment)
     }
 
     return (
@@ -61,10 +74,10 @@ function MyFavorites( { myVisits, setMyVisits, restaurant } ) {
             ratePlace={ratePlace} setRatePlace={setRatePlace}/>
         <UserComment 
             myVisits={myVisits} visit={visit} 
-            renderComment={renderComment} setRenderComment={setRenderComment}/>
+            renderComment={renderComment} setRenderComment={setRenderComment} handleEditComment={handleEditComment}/>
         <VisitCount visit={visit} setMyVisits={setMyVisits}/>
         <DeleteCard 
-            myVisits={myVisits} setMyVisits={setMyVisits} visit={visit} restaurant={restaurant} />
+            myVisits={myVisits} setMyVisits={setMyVisits} visit={visit} restaurant={restaurant} setRestaurant={setRestaurant}/>
         </div>
         </div>
         )}

@@ -1,14 +1,14 @@
 import React, { useState } from "react"
+import { AiOutlineMessage, AiFillEdit, AiOutlineCheck } from "react-icons/ai"
 
-export default function UserComment( { myVisits, visit, renderComment, setRenderComment }) {
+export default function UserComment( { myVisits, visit, renderComment, setRenderComment, handleEditComment }) {
 
-    // console.log(visit)
+    console.log(renderComment)
 
     const [userComment, setUserComment] = useState(null)
     const [commentButton, setCommentButton] = useState(false)
 
     function handleSubmitComment(id) {
-        console.log(id)
         const submitComment = myVisits.map(place => {
             if (place.id === id) {
                 visit.comment = renderComment
@@ -22,15 +22,17 @@ export default function UserComment( { myVisits, visit, renderComment, setRender
                     })
                 })
                 .then(res => res.json())
-                .then(res => setRenderComment(res))
+                .then(res => handleEditComment(res))
             }
+            if (visit.comment !== "") {
             setCommentButton((commentButton) => commentButton = true)
             return place;
+        }
         })
         setUserComment(null)
     }
 
-    const buttonDisplay = commentButton ? "Edit" : "Comment"
+    const buttonDisplay = commentButton ? <AiFillEdit/> : <AiOutlineMessage/>
     
     return (
         <a className="comment-button">
@@ -40,14 +42,11 @@ export default function UserComment( { myVisits, visit, renderComment, setRender
             <textarea className="textarea-submit" type="text" value={visit.renderComment} onChange={(e) => setRenderComment(e.target.value)}/>
             </div>
             <div>
-            <button onClick={() => handleSubmitComment(visit.id)}>Submit Comment</button>
+            <button onClick={() => handleSubmitComment(visit.id)}><AiOutlineCheck/></button>
             </div>
             </>
         ) : (
         <button onClick={() => setUserComment(visit.id)}>{buttonDisplay}</button>)}
-        {/* <div>
-        <a style={{ fontWeight : "bold" }}>Your comment: </a> {renderComment}
-        </div> */}
         </a>
     )
 }

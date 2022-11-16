@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react"
+import { AiOutlinePlus } from "react-icons/ai"
 
 let today = new Date();
 let dd = String(today.getDate()).padStart(2, '0');
@@ -54,7 +55,7 @@ export default function VisitCount( { visit, setMyVisits } ) {
     // console.log(visitDate)
 
     return(<div className="user-visit">
-        <div><button disabled={disable ? true : false} onClick={() => {clickCount(visit.id);disableBtn()}}>+</button>Visit(s): {visit.visitCounter} {countDown}</div>
+        <div><button disabled={disable ? true : false} onClick={() => {clickCount(visit.id);disableBtn()}}><AiOutlinePlus/></button>Visit(s): {visit.visitCounter} {countDown}</div>
         <a>Last Visited: {visitDate}</a>
         <div></div>
 
