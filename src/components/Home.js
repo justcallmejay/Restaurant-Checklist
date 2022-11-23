@@ -1,7 +1,6 @@
 import React, { useEffect, useState, useRef } from "react";
 import { homeImage } from '../image'
 
-const colors = ["#0088FE", "#00C49F", "#FFBB28"];
 const delay = 4000;
 
 function Home() {
@@ -43,7 +42,6 @@ function Home() {
                     {homeImage.map((index) => (<img
         className="slide"
         src={index}
-            // style={{ backgroundColor }}
           ></img>
         ))}
       </div>

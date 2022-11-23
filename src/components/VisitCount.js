@@ -13,7 +13,6 @@ export default function VisitCount( { visit, setMyVisits } ) {
     const [visitDate, setVisitDate] = useState('')
     const [disable, setDisable] = useState(false)
     const [countDown, setCountDown] = useState('')
-    // const [visitCount, setVisitCount] = useState(visit.visitCounter)
 
     useEffect(() => {
         fetch('http://localhost:4000/user')
@@ -21,14 +20,9 @@ export default function VisitCount( { visit, setMyVisits } ) {
         .then(res => setMyVisits(res))
     }, [])
 
-    // console.log(visitCount)
-
     function clickCount(id) {
-        console.log(id)
         if (visit.id === id) {
-            console.log(id)
         visit.visitCounter = ++visit.visitCounter
-        // setVisitCount(count => count + 1)
         fetch(`http://localhost:4000/user/${visit.id}`,{
             method: "PATCH",
             headers: {
@@ -42,20 +36,46 @@ export default function VisitCount( { visit, setMyVisits } ) {
 }
     
    
-    const disableBtn = () => {   
-        setDisable(!disable)
-        setVisitDate(today)
-        if (!disable) {
-            setInterval(() => {setDisable(disable)}, 1440000)
-            setCountDown("(Wait 3 at least hours to click '+' button again)")
+const disableBtn = (visiting) => {   
+    setDisable(!disable);
+    setVisitDate(today);
+    visiting.timer = 10;
+    visiting.lock = !disable;
+    if (!disable) {
+        let timer = setInterval(() => {
+            fetch(`http://localhost:4000/user/${visiting.id}`, {
+                method: "PATCH",
+                headers: {
+                    "Content-Type" : "application/json"
+                },
+                body: JSON.stringify({
+                    timer: --visiting.timer,
+                    lock: visiting.lock
+                })
+            })
+            setCountDown(`(Wait at least ${visiting.timer} seconds to click '+' button again)`)
+
+            if(visiting.timer === 0) {
+                setDisable(disable)
+                setCountDown(null)
+                visiting.lock = disable
+                fetch(`http://localhost:4000/user/${visiting.id}`, {
+                    method: "PATCH",
+                    headers: {
+                        "Content-Type" : "application/json"
+                    },
+                    body: JSON.stringify({
+                        lock: visiting.lock
+                    })
+                })
+            clearInterval(timer)
+            };
+        }, 1000)
 }}
 
-    // const disableButton = 
-
-    // console.log(visitDate)
-
     return(<div className="user-visit">
-        <div><button disabled={disable ? true : false} onClick={() => {clickCount(visit.id);disableBtn()}}><AiOutlinePlus/></button>Visit(s): {visit.visitCounter} {countDown}</div>
+        <div><button className="visit-btn" disabled={disable ? true : false} onClick={() => {clickCount(visit.id);disableBtn(visit)}}><AiOutlinePlus size="10px"/></button>&nbsp;&nbsp;Visit(s): {visit.visitCounter}</div>
+        <h5 className="timer">{countDown}</h5>
         <a>Last Visited: {visitDate}</a>
         <div></div>
 

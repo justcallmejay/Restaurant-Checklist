@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 
-export default function SortFavorites( { myVisits, setMyVisits, sortFavorites, setSortFavorites } ) {
+export default function SortVisits ( { myVisits, setMyVisits, sortFavorites, setSortFavorites } ) {
 
     useEffect(() => {
         if (sortFavorites === "visits") {
@@ -11,7 +11,6 @@ export default function SortFavorites( { myVisits, setMyVisits, sortFavorites, s
     }, [sortFavorites])
 
     function sortByVisitCount() {
-        console.log('clicked')
         return [...myVisits].sort(function(a,b) {
             return b.visitCounter - a.visitCounter
         })
@@ -22,8 +21,6 @@ export default function SortFavorites( { myVisits, setMyVisits, sortFavorites, s
             return b.userrating - a.userrating
         })
     }
-
-    // console.log(myVisits)
 
         return (
         <>

@@ -8,7 +8,6 @@ function Restaurants( { restaurant, setRestaurant, myVisits, setMyVisits } ) {
 const renderMyVisits = (place) => {
         if (!myVisits.includes(place)) {
             const renderRestaurant = [...myVisits, place]
-            // setMyVisits(renderRestaurant)
         fetch('http://localhost:4000/user', {
             method: "POST",
             headers: {
@@ -17,7 +16,9 @@ const renderMyVisits = (place) => {
             body: JSON.stringify({
                 ...place,
             userrating: '',
-            visitCounter: 1
+            visitCounter: 1,
+            timer: 0,
+            lock : false
             })
         })
         .then(res => {

@@ -22,7 +22,8 @@ function RestaurantCard({ renderMyVisits, food, displayError }) {
         <h2>{food.name}</h2>
         <h3>Distance: {food.location} mi.</h3>
         <h3>Type: {food.description}</h3>
-        <h3>Rating avg: {food.rating.toFixed(2)} / 5  from  {food.ratingcount} Customers</h3>
+        <h3>Rating avg:</h3> 
+        <h4>&nbsp;&nbsp;&nbsp;{food.rating.toFixed(2)} / 5  from  {food.ratingcount} Customers</h4>
         <h3>Price: {food.price}</h3>
         <div id="message">
         <h3 style={{ display : confirmMessage }}>Added!</h3>

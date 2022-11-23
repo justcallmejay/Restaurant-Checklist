@@ -1,23 +1,21 @@
 import React, { useState } from "react";
 import { AiOutlineFieldNumber, AiOutlineCheck } from "react-icons/ai"
 
-export default function UserRating( { myVisits, visit, ratePlace, setRatePlace } ) {
+export default function UserRating( { myVisits, visit, ratePlace, setRatePlace, handleVisit } ) {
 
     const [renderRate, setRenderRate] = useState("")
 
     function handleClick(id) {
-        console.log('clicked')
-        const updateRestaurantRating = [...myVisits].map(place => {
-            if (place.id === id) {
+            if (visit.id === id) {
                 if (renderRate === "") {
                     alert('please choose a number')
                 } else {
-                if (place.userrating === "") {
-                const newRenderRate = [...place.ratingData, parseInt(renderRate)];
+                if (visit.userrating === "") {
+                const newRenderRate = [...visit.ratingData, parseInt(renderRate)];
                 const sumArray = newRenderRate.reduce((accumulator, value) => {
                     return accumulator + value
                 }, 0);
-                const customerCount = (parseInt(place.ratingcount) + 1)
+                const customerCount = (parseInt(visit.ratingcount) + 1)
                 const newRating = (sumArray / customerCount)
             fetch(`http://localhost:4000/restaurants/${id}`, {
                 method: "PATCH",
@@ -30,6 +28,8 @@ export default function UserRating( { myVisits, visit, ratePlace, setRatePlace }
                     ratingcount: customerCount
                 })
             })
+            .then(res => res.json())
+            .then(res => handleVisit(res))
             fetch(`http://localhost:4000/user/${id}`, {
                 method: "PATCH",
                 headers: {
@@ -42,15 +42,16 @@ export default function UserRating( { myVisits, visit, ratePlace, setRatePlace }
                     ratingcount: customerCount
                 })
             })
+            .then(res => res.json())
+            .then(res => handleVisit(res))
         }
-        else if (place.userrating !== "") {
+        else if (visit.userrating !== "") {
             alert('you already rated this restaurant')
         }}
     }
-        return place;
-    })
     setRenderRate('')
     setRatePlace(null)
+    return visit;
     }
 
     return (

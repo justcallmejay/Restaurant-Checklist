@@ -3,7 +3,7 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import NavBar from "./components/NavBar";
 import Home from "./components/Home";
 import Restaurants from "./components/Restaurants";
-import MyFavorites from "./components/MyFavorites";
+import MyVisits from "./components/MyVisits";
 import NewRestaurant from "./components/NewRestaurant";
 import Footer from "./components/Footer";
 import './App.css';
@@ -15,7 +15,8 @@ const initialStateForm = {
   description: '',
   price: '',
   rating: '',
-  ratingData: []
+  ratingData: [],
+  ratingcount: 1
 }
 
 function App() {
@@ -31,8 +32,20 @@ useEffect(() => {
     .then(restaurants => setRestaurant(restaurants))
 }, [addRestaurant])
 
+useEffect(() => {
+  fetch('http://localhost:4000/user')
+  .then(res => res.json())
+  .then(res => setMyVisits(res))
+}, [addRestaurant])
+
 function handleNewRestaurant(inputRestaurant) {
   setRestaurant(place => {
+    return [...place, inputRestaurant]
+  })
+}
+
+function handleMyVisit(inputRestaurant) {
+  setMyVisits(place => {
     return [...place, inputRestaurant]
   })
 }
@@ -45,21 +58,19 @@ function handleNewRestaurant(inputRestaurant) {
       <NavBar />
       <Switch>
         <Route path="/restaurants">
-          {/* {restaurant.map(food => */}
           <Restaurants 
             restaurant={restaurant} 
             setRestaurant={setRestaurant} 
             myVisits={myVisits} 
             setMyVisits={setMyVisits}
             />
-          {/* )} */}
         </Route>
         <Route path="/my-visits">
-          <MyFavorites 
+          <MyVisits 
             myVisits={myVisits} 
             setMyVisits={setMyVisits} 
             restaurant={restaurant}
-            setRestaurant={setRestaurant} 
+            setRestaurant={setRestaurant}
           />
         </Route>
         <Route path="/add-restaurant">
@@ -69,6 +80,8 @@ function handleNewRestaurant(inputRestaurant) {
             addRestaurant={addRestaurant} 
             setAddRestaurant={setAddRestaurant} 
             initialStateForm={initialStateForm}
+            setRestaurant={setRestaurant}
+            handleMyVisit={handleMyVisit}
           />
         </Route>
         <Route path="/">

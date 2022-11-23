@@ -1,9 +1,7 @@
 import React, { useState } from "react"
 import { AiOutlineMessage, AiFillEdit, AiOutlineCheck } from "react-icons/ai"
 
-export default function UserComment( { myVisits, visit, renderComment, setRenderComment, handleEditComment }) {
-
-    console.log(renderComment)
+export default function UserComment( { myVisits, visit, renderComment, setRenderComment, handleVisit }) {
 
     const [userComment, setUserComment] = useState(null)
     const [commentButton, setCommentButton] = useState(false)
@@ -22,7 +20,7 @@ export default function UserComment( { myVisits, visit, renderComment, setRender
                     })
                 })
                 .then(res => res.json())
-                .then(res => handleEditComment(res))
+                .then(res => handleVisit(res))
             }
             if (visit.comment !== "") {
             setCommentButton((commentButton) => commentButton = true)
