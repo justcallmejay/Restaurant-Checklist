@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import UserRating from "./UserRating";
 import UserComment from "./UserComment";
 import VisitCount from "./VisitCount";
@@ -7,17 +7,19 @@ import SortVisits from "./SortVisits"
 
 function MyVisits ( { myVisits, setMyVisits, restaurant, setRestaurant } ) {
 
-    const [renderComment, setRenderComment] = useState('')
-    const [ratePlace, setRatePlace] = useState(null)
-    const [sortFavorites, setSortFavorites] = useState('')
+    useEffect(() => {
+        fetch('http://localhost:4000/user')
+        .then(res => res.json())
+        .then(res => setMyVisits(res))
+    }, [])
 
-    
     useEffect(() => {
         fetch('http://localhost:4000/restaurants')
         .then(res => res.json())
         .then(res => setRestaurant(res))
-    }, [ratePlace, myVisits])
-    
+    }, [myVisits])
+
+
     function renderVisits() {
         if (myVisits.length !== 0) {
             return (
@@ -26,8 +28,6 @@ function MyVisits ( { myVisits, setMyVisits, restaurant, setRestaurant } ) {
             <SortVisits 
                 myVisits={myVisits} 
                 setMyVisits={setMyVisits} 
-                sortFavorites={sortFavorites} 
-                setSortFavorites={setSortFavorites}
             />
             </>)
         } else {
@@ -80,15 +80,11 @@ function MyVisits ( { myVisits, setMyVisits, restaurant, setRestaurant } ) {
         <UserRating 
             visit={visit}
             myVisits={myVisits}  
-            ratePlace={ratePlace} 
-            setRatePlace={setRatePlace}
             handleVisit={handleVisit}
             />
         <UserComment 
             myVisits={myVisits} 
             visit={visit} 
-            renderComment={renderComment} 
-            setRenderComment={setRenderComment} 
             handleVisit={handleVisit}
             />
         <VisitCount 

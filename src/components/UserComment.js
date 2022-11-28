@@ -1,10 +1,11 @@
 import React, { useState } from "react"
 import { AiOutlineMessage, AiFillEdit, AiOutlineCheck } from "react-icons/ai"
 
-export default function UserComment( { myVisits, visit, renderComment, setRenderComment, handleVisit }) {
+export default function UserComment( { myVisits, visit, handleVisit }) {
 
     const [userComment, setUserComment] = useState(null)
     const [commentButton, setCommentButton] = useState(false)
+    const [renderComment, setRenderComment] = useState(visit.comment)
 
     function handleSubmitComment(id) {
         const submitComment = myVisits.map(place => {
@@ -37,7 +38,7 @@ export default function UserComment( { myVisits, visit, renderComment, setRender
         {visit.id === userComment ? (
             <>
             <div>
-            <textarea className="textarea-submit" type="text" value={visit.renderComment} onChange={(e) => setRenderComment(e.target.value)}/>
+            <textarea className="textarea-submit" type="text" value={renderComment} onChange={(e) => setRenderComment(e.target.value)}/>
             </div>
             <div>
             <button onClick={() => handleSubmitComment(visit.id)}><AiOutlineCheck/></button>

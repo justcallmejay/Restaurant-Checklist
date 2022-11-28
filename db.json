@@ -55,7 +55,7 @@
       "image": "/image/sushi-village.jpg",
       "description": "sushi",
       "price": "$$$",
-      "rating": 4,
+      "rating": 4.666666666666667,
       "ratingData": [
         4,
         5,
@@ -64,7 +64,7 @@
         5,
         5
       ],
-      "ratingcount": 7,
+      "ratingcount": 6,
       "comment": "",
       "id": 3
     },
@@ -381,6 +381,5 @@
       "id": 20
     }
   ],
-  "user": [
-  ]
+  "user": []
 }

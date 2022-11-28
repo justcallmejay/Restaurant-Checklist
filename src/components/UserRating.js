@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import { AiOutlineFieldNumber, AiOutlineCheck } from "react-icons/ai"
 
-export default function UserRating( { myVisits, visit, ratePlace, setRatePlace, handleVisit } ) {
+export default function UserRating( { myVisits, visit, handleVisit } ) {
 
     const [renderRate, setRenderRate] = useState("")
+    const [ratePlace, setRatePlace] = useState(null)
 
     function handleClick(id) {
             if (visit.id === id) {

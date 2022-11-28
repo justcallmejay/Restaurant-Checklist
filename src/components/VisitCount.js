@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react"
+import React, { useState } from "react"
 import { AiOutlinePlus } from "react-icons/ai"
 
 let today = new Date();
@@ -8,17 +8,11 @@ let yyyy = today.getFullYear();
 
 today = (mm + '/' + dd + '/' + yyyy)
 
-export default function VisitCount( { visit, setMyVisits } ) {
+export default function VisitCount( { visit } ) {
 
     const [visitDate, setVisitDate] = useState('')
     const [disable, setDisable] = useState(false)
     const [countDown, setCountDown] = useState('')
-
-    useEffect(() => {
-        fetch('http://localhost:4000/user')
-        .then(res => res.json())
-        .then(res => setMyVisits(res))
-    }, [])
 
     function clickCount(id) {
         if (visit.id === id) {

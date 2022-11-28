@@ -1,6 +1,8 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 
-export default function SortVisits ( { myVisits, setMyVisits, sortFavorites, setSortFavorites } ) {
+export default function SortVisits ( { myVisits, setMyVisits } ) {
+
+    const [sortFavorites, setSortFavorites] = useState('')
 
     useEffect(() => {
         if (sortFavorites === "visits") {
