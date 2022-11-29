@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import { AiOutlineFieldNumber, AiOutlineCheck } from "react-icons/ai"
 
-export default function UserRating( { myVisits, visit, handleVisit } ) {
+export default function UserRating( { visit, handleVisit, updateRestaurant } ) {
 
     const [renderRate, setRenderRate] = useState("")
     const [ratePlace, setRatePlace] = useState(null)
 
-    function handleClick(id) {
-            if (visit.id === id) {
+    function handleClick(place) {
+            if (visit.id === place.id) {
                 if (renderRate === "") {
                     alert('please choose a number')
                 } else {
@@ -18,7 +18,7 @@ export default function UserRating( { myVisits, visit, handleVisit } ) {
                 }, 0);
                 const customerCount = (parseInt(visit.ratingcount) + 1)
                 const newRating = (sumArray / customerCount)
-            fetch(`http://localhost:4000/restaurants/${id}`, {
+            fetch(`http://localhost:4000/restaurants/${place.id}`, {
                 method: "PATCH",
                 headers: {
                     "Content-Type" : "application/json"
@@ -30,8 +30,8 @@ export default function UserRating( { myVisits, visit, handleVisit } ) {
                 })
             })
             .then(res => res.json())
-            .then(res => handleVisit(res))
-            fetch(`http://localhost:4000/user/${id}`, {
+            .then(() => updateRestaurant(place))
+            fetch(`http://localhost:4000/user/${place.id}`, {
                 method: "PATCH",
                 headers: {
                     "Content-Type" : "application/json"
@@ -67,7 +67,7 @@ export default function UserRating( { myVisits, visit, handleVisit } ) {
                 <option value="4">4</option>
                 <option value="5">5</option>
             </select>
-            <button onClick={() => handleClick(visit.id)}><AiOutlineCheck/></button>
+            <button onClick={() => handleClick(visit)}><AiOutlineCheck/></button>
             </>
         ) : (
         <button onClick={() => setRatePlace(visit.id)}><AiOutlineFieldNumber/></button>

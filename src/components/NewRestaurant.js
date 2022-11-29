@@ -100,7 +100,6 @@ function handleSubmit(e) {
     renderThanks()
 
     if (checkBox === true)  {
-        console.log('hello')
         fetch('http://localhost:4000/user', {
             method: "POST",
             headers: {

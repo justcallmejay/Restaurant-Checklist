@@ -1,9 +1,15 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import RestaurantCard from "./RestaurantCard";
 import FilterRestaurant from "./FilterRestaurant";
 import SortRestaurant from "./SortRestaurant";
 
 function Restaurants( { restaurant, setRestaurant, myVisits, setMyVisits } ) {
+
+// useEffect(() => {
+//     fetch('http://localhost:4000/restaurants')
+//     .then(res => res.json())
+//     .then(res => setRestaurant(res))
+// }, [])
 
 const renderMyVisits = (place) => {
         if (!myVisits.includes(place)) {

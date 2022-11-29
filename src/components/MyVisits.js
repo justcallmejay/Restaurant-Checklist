@@ -14,11 +14,11 @@ function MyVisits ( { myVisits, setMyVisits, restaurant, setRestaurant } ) {
     }, [])
 
     useEffect(() => {
+        console.log('visit')
         fetch('http://localhost:4000/restaurants')
         .then(res => res.json())
         .then(res => setRestaurant(res))
     }, [myVisits])
-
 
     function renderVisits() {
         if (myVisits.length !== 0) {
@@ -52,6 +52,17 @@ function MyVisits ( { myVisits, setMyVisits, restaurant, setRestaurant } ) {
         return setMyVisits(deleteRestaurantCard);
     }
 
+    function updateRestaurant(removePlace) {
+        const updateRestaurant = restaurant.map(place  => {
+            if (place.id === removePlace) {
+                return removePlace
+            } else {
+                return place
+            }
+        })
+        setRestaurant(updateRestaurant)
+    }
+
     return (
     <>
     <div className="restaurant-pagetitle">
@@ -81,6 +92,7 @@ function MyVisits ( { myVisits, setMyVisits, restaurant, setRestaurant } ) {
             visit={visit}
             myVisits={myVisits}  
             handleVisit={handleVisit}
+            updateRestaurant={updateRestaurant}
             />
         <UserComment 
             myVisits={myVisits} 
@@ -91,12 +103,11 @@ function MyVisits ( { myVisits, setMyVisits, restaurant, setRestaurant } ) {
             visit={visit} 
             setMyVisits={setMyVisits}
             />
-        <DeleteCard 
-            myVisits={myVisits} 
+        <DeleteCard  
             visit={visit} 
-            restaurant={restaurant} 
-            setRestaurant={setRestaurant}
+            restaurant={restaurant}
             deleteRestaurant={deleteRestaurant}
+            updateRestaurant={updateRestaurant}
             />
             </div>
         </div>

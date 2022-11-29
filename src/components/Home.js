@@ -34,7 +34,9 @@ function Home() {
             <div className="home-container">
                 <div className="home-text">
                     <h1>Eat-Go</h1>
-                    <p>Explore the restaurants around your local area.  Track your visits and share your experiences (food, services, atmosphere) to your friends.</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;Explore the restaurants.</p>  
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Share your preferences.</p>  
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Remember the experience.</p>
                 </div>
             </div>
         <div className="slideshow">

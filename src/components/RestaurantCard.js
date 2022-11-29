@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function RestaurantCard({ renderMyVisits, food, displayError }) {
+function RestaurantCard({ renderMyVisits, food }) {
 
 
     const [highlightCard, setHighlightCard] = useState(false)
@@ -27,7 +27,6 @@ function RestaurantCard({ renderMyVisits, food, displayError }) {
         <h3>Price: {food.price}</h3>
         <div id="message">
         <h3 style={{ display : confirmMessage }}>Added!</h3>
-        <h3>{displayError}</h3>
         </div>
     </div>
     </>

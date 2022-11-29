@@ -39,15 +39,11 @@ useEffect(() => {
 }, [addRestaurant])
 
 function handleNewRestaurant(inputRestaurant) {
-  setRestaurant(place => {
-    return [...place, inputRestaurant]
-  })
+  return setRestaurant([...restaurant, inputRestaurant])
 }
 
 function handleMyVisit(inputRestaurant) {
-  setMyVisits(place => {
-    return [...place, inputRestaurant]
-  })
+  return setMyVisits([...myVisits, inputRestaurant])
 }
 
   return (
